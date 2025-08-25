@@ -79,7 +79,7 @@ html, body {
 
 .title img {
     width: 70%;
-    margin: 27% 0 0 0;
+    margin: 40% 0 0 0;
     position: relative;
     animation: pulseGlow 2s ease-in-out infinite,
             pixelPop 1.8s ease-in-out infinite;
@@ -109,7 +109,7 @@ html, body {
 .buttons {
     display: flex;
     gap: 5%;
-    margin: 10% 0 0 19%;
+    margin: 10% 0 0 17%;
     position: relative;
     animation: pixelBlink  1.3s ease-in-out infinite;
 }
