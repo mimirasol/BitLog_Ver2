@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Log In</title>
     <link rel="icon" type="image/gif" href="../css/assets/bitlog_coinanimation.gif">
     <link rel="stylesheet" href="../css/loginDesktop.css"
       media="screen and (min-width: 1441px)">
