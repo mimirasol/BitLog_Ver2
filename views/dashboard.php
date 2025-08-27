@@ -13,30 +13,28 @@ session_start();
 </head>
 <body>
   <div class="sidebar">
-    <div class="siderbar-items">
-      <button class="logo">
-        <img src="../css/assets/bitlog_coinanimation.gif" alt="Logo">
-      </button>
-      <button class="icon">
-        <img src="../css/assets/home_icon.png" alt="Home">
-      </button>
-      <button class="icon">
-        <img src="../css/assets/wallet_icon.png" alt="Wallet">
-      </button>
-      <button class="icon">
-        <img src="../css/assets/profile_icon.png" alt="Profile">
-      </button>
-    </div>
-  <button class="icon logout">
-    <img src="../css/assets/logout_icon.png" alt="Logout">
-  </button>
+    <button class="logo">
+      <img src="../css/assets/bitlog_coinanimation.gif" alt="Logo">
+    </button>
+    <button class="icon">
+      <img src="../css/assets/home_icon.png" alt="Home">
+    </button>
+    <button class="icon">
+      <img src="../css/assets/wallet_icon.png" alt="Wallet">
+    </button>
+    <button class="icon">
+      <img src="../css/assets/profile_icon.png" alt="Profile">
+    </button>
+    <button class="icon logout">
+      <img src="../css/assets/logout_icon.png" alt="Logout">
+    </button>
   </div>
 
   <div class="content">
-    <h2>Responsive Sidebar Example</h2>
-    <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
-    <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
-    <h3>Resize the browser window to see the effect.</h3>
+    <div class="character-wrapper">
+      <img src="../css/assets/oreo.png" alt="Character">
+      <div class="overlay-text">Hello, </div>
+    </div>
   </div>
 
 </body>

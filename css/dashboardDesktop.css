@@ -63,12 +63,12 @@
 .sidebar {
   margin: 0;
   padding: 0 0 10px 70px;
-  width: 80px;
+  width: 90px;
   background-color: #fffcf3;
   position: fixed;
   height: 100%;
   overflow: auto;
-  border-right: 2px solid #5c3d00;
+  border-right: 5px solid #70480c;
 }
 
 .sidebar .icon {
@@ -120,9 +120,41 @@
 }
 
 div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
+  margin-left: 340px;
+  padding-top: 200px;
+}
+
+.character-wrapper {
+  width: 500px;
+  background-color: #ffde59;
+  border: 2px solid #70480c;
+  box-shadow: 16px 13px #70480c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.character-wrapper img {
+  width: 450px;
+}
+
+.overlay-text{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  height: 150px;
+  background-color: #fffcf3;
+  color: #70480c;
+  border-top: 2px solid #70480c;
+  font-family: subheaderfont;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 html, body {
