@@ -126,7 +126,8 @@ div.content {
 }
 
 .character-wrapper {
-  width: 500px;
+  height: 550px;
+  width: 550px;
   background-color: #ffde59;
   border: 2px solid #70480c;
   box-shadow: 16px 13px #70480c;
@@ -156,6 +157,35 @@ div.content {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container {
+  position: absolute;
+  width: 600px;
+  height: 120px;
+  background-color: #fffcf3;
+  color: #70480c;
+  border: 2px solid #70480c;
+  font-family: subheaderfont;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.allowance {
+  left: 850px;
+  bottom: 420px;
+}
+
+.budget {
+  left: 850px;
+  bottom: 240px;
+}
+
+.expenses {
+  left: 850px;
+  bottom: 60px;
 }
 
 html, body {

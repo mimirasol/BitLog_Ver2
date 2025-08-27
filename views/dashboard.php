@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+if (!isset($_SESSION["user_id"])) {
+    header("Location: homepage.html"); 
+    exit();
+}
+
+$user_id = $_SESSION["user_id"];
+$username = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -34,9 +42,12 @@ session_start();
   <div class="content">
     <div class="character-wrapper">
       <img src="../css/assets/shark.png" alt="Character">
-      <div class="overlay-text">Hello, </div>
+      <div class="overlay-text">Hello, <?php echo $username; ?>!</div>
     </div>
-  </div>
 
+    <div class="container allowance">Allowance</div>
+    <div class="container budget">Budget</div>
+    <div class="container expenses">Expenses</div>
+  </div>
 </body>
 </html>
