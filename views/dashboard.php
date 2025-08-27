@@ -14,7 +14,7 @@ session_start();
 <body>
   <div class="sidebar">
     <div class="siderbar-items">
-      <button class="icon">
+      <button class="logo">
         <img src="../css/assets/bitlog_coinanimation.gif" alt="Logo">
       </button>
       <button class="icon">
