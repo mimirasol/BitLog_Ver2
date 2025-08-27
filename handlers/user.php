@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
                 if ($role === "user") {
                     $_SESSION['just_logged_in'] = true;
-                    header("Location: dashboard.php");
+                    header("Location: ../views/dashboard.php");
                     exit();
                 } else {
                     header("Location: ../views/login.php?error=" . urlencode("Invalid role assigned!"));
