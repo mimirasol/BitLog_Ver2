@@ -122,6 +122,7 @@
 div.content {
   margin-left: 340px;
   padding-top: 200px;
+  animation: pixelBounce 2.5s ease-in-out infinite;
 }
 
 .character-wrapper {
