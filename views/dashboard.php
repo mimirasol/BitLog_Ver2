@@ -16,6 +16,24 @@ $stmt->execute();
 $stmt->bind_result($animal);
 $stmt->fetch();
 $stmt->close();
+
+$stmt = $conn->prepare("SELECT amount FROM allowances WHERE user_id = ?");
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$stmt->bind_result($allowance);
+$stmt->fetch();
+$stmt->close();
+$allowance = $allowance ?? number_format(0, 2);
+
+$stmt = $conn->prepare("SELECT SUM(e.amount) FROM expenses e JOIN items i ON e.item_id = i.item_id WHERE i.user_id = ? ");
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$stmt->bind_result($total_expenses);
+$stmt->fetch();
+$stmt->close();
+$total_expenses = $total_expenses ?? number_format(0, 2);
+
+$budget = $allowance - $total_expenses;
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +65,7 @@ $stmt->close();
       </button>
     </div>
     <button class="icon logout">
-      <a href="logout.php"><img src="../css/assets/logout_icon.png" alt="Logout"><a>
+      <a href="logout.php"><img src="../css/assets/logout_icon.png" alt="Logout"></a>
     </button>
   </div>
 
@@ -59,9 +77,9 @@ $stmt->close();
       <div class="overlay-text">Hello, <?php echo $username; ?>!</div>
     </div>
 
-    <div class="container allowance">Allowance</div>
-    <div class="container budget">Budget</div>
-    <div class="container expenses">Expenses</div>
+    <div class="container allowance">Allowance <?php echo $allowance; ?></div>
+    <div class="container budget">Budget <?php echo number_format($budget, 2, '.', ''); ?></div>
+    <div class="container expenses">Expenses <?php echo $total_expenses; ?></div>
   </div>
 </body>
 </html>
