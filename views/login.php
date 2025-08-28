@@ -10,7 +10,7 @@ session_start();
     <title>Log In</title>
     <link rel="icon" type="image/gif" href="../css/assets/bitlog_coin.png">
     <link rel="stylesheet" href="../css/loginDesktop.css"
-      media="screen and (min-width: 1441px)">
+        media="screen and (min-width: 1441px)">
 </head>
 <body>
     <div class="signupPage">

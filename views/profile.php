@@ -23,9 +23,9 @@ $stmt->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Profile</title>
     <link rel="icon" type="image/gif" href="../css/assets/bitlog_coin.png">
-    <link rel="stylesheet" href="../css/dashboardDesktop.css"
+    <link rel="stylesheet" href="../css/profileDesktop.css"
       media="screen and (min-width: 1441px)">
 </head>
 <body>
@@ -47,17 +47,51 @@ $stmt->close();
     </button>
   </div>
 
-  <div class="content">
+    <div class="content">
+    <button id ="prevButton"><</button>
+
     <div class="character-wrapper">
-      <?php
+        <?php
             echo '<img src="' . $animal . '" id="animalImage">';
         ?>
-      <div class="overlay-text">Hello, <?php echo $username; ?>!</div>
     </div>
 
-    <div class="container allowance">Allowance</div>
-    <div class="container budget">Budget</div>
-    <div class="container expenses">Expenses</div>
-  </div>
+    <button id = "nextButton">></button>
+
+    <div class="setButton">
+        <form action="../handlers/editProfile.php" method="POST">
+            <input type="hidden" id="selectedAnimal" name="selectedAnimal">
+            <button type="submit" id="setAnimal">set</button>
+        </form>
+    </div>
+    </div>
+
+    <script>  
+    const animals = [
+        "../css/assets/cat.png",
+        "../css/assets/chicken.png",
+        "../css/assets/dog.png",
+        "../css/assets/hamster.png",
+        "../css/assets/pig.png",
+        "../css/assets/shark.png"
+    ];
+
+    let currentIndex = 0;
+    const animalImage = document.getElementById("animalImage");
+    let setAnimal;
+
+    document.getElementById("prevButton").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + animals.length) % animals.length;
+        animalImage.src = animals[currentIndex];
+        document.getElementById("selectedAnimal").value = animals[currentIndex];
+    });
+
+    document.getElementById("nextButton").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % animals.length;
+        animalImage.src = animals[currentIndex];
+        document.getElementById("selectedAnimal").value = animals[currentIndex];
+    });
+    </script>
+
 </body>
 </html>
