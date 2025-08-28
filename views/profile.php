@@ -39,9 +39,13 @@ $stmt->close();
     <button class="icon">
       <a href="wallet.php"><img src="../css/assets/wallet_icon.png" alt="Wallet"></a>
     </button>
-    <button class="icon">
-      <a href="profile.php"><img src="../css/assets/profile_icon.png" alt="Profile"></a>
-    </button>
+    <div class="profile">
+      <button class="icon">
+        <a href="profile.php"><?php
+              echo '<img src="' . $animal . '" id="profile">';
+          ?></a>
+      </button>
+    </div>
     <button class="icon logout">
       <a href="logout.php"><img src="../css/assets/logout_icon.png" alt="Logout"><a>
     </button>
@@ -65,12 +69,18 @@ $stmt->close();
         </form>
     </div>
 
+    <div class="labelBox">
+          <p>User Information</p>
+      </div>
+
     <div class="userInfo">
         <form action="../handlers/editUsername.php" method="POST">
+            <label for="editName">Name:</label>
             <?php
                 echo '<input type="text" id="username" name="editUsername" placeholder="'.$username . '">';
             ?>
             <p id="errorMessage" style="display: none;"></p>
+            <p id="confirmationMessage" style="display: none; margin-left: 150px;"></p>
             <button type="submit" id="setUsername">edit</button>
         </form>
     </div>
@@ -107,6 +117,13 @@ $stmt->close();
     if (URLError) {
         document.getElementById("errorMessage").textContent = URLError;
         document.getElementById("errorMessage").style.display = "block";
+    }
+
+    const confirm = new URLSearchParams(window.location.search);
+    const URLConfirm = confirm.get("username");
+    if (URLConfirm) {
+        document.getElementById("confirmationMessage").textContent = URLConfirm;
+        document.getElementById("confirmationMessage").style.display = "block";
     }
     </script>
 

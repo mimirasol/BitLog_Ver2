@@ -39,9 +39,13 @@ $stmt->close();
     <button class="icon">
       <a href="wallet.php"><img src="../css/assets/wallet_icon.png" alt="Wallet"></a>
     </button>
-    <button class="icon">
-      <a href="profile.php"><img src="../css/assets/profile_icon.png" alt="Profile"></a>
-    </button>
+    <div class="profile">
+      <button class="icon">
+        <a href="profile.php"><?php
+              echo '<img src="' . $animal . '" id="profile">';
+          ?></a>
+      </button>
+    </div>
     <button class="icon logout">
       <a href="logout.php"><img src="../css/assets/logout_icon.png" alt="Logout"><a>
     </button>
