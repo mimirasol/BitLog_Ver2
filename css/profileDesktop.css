@@ -183,6 +183,17 @@ button:hover {
     background-color: #70480c;
     font-size: 35px;
     padding: 15px 60px;
-    margin-top: 50px;
-    margin-left: 160px;
+    margin-top: 60px;
+    margin-left: 150px;
+}
+
+.userInfo p {
+    color: red;
+    font-family: subheaderfont;
+    position: relative;
+    
+}
+
+.userInfo {
+  margin-left: 1000px;
 }

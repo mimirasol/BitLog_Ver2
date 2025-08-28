@@ -64,6 +64,16 @@ $stmt->close();
             <button type="submit" id="setAnimal">set</button>
         </form>
     </div>
+
+    <div class="userInfo">
+        <form action="../handlers/editUsername.php" method="POST">
+            <?php
+                echo '<input type="text" id="username" name="editUsername" placeholder="'.$username . '">';
+            ?>
+            <p id="errorMessage" style="display: none;"></p>
+            <button type="submit" id="setUsername">edit</button>
+        </form>
+    </div>
     </div>
 
     <script>  
@@ -91,6 +101,13 @@ $stmt->close();
         animalImage.src = animals[currentIndex];
         document.getElementById("selectedAnimal").value = animals[currentIndex];
     });
+
+    const error = new URLSearchParams(window.location.search);
+    const URLError = error.get("error");
+    if (URLError) {
+        document.getElementById("errorMessage").textContent = URLError;
+        document.getElementById("errorMessage").style.display = "block";
+    }
     </script>
 
 </body>
