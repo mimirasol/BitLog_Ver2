@@ -5,7 +5,7 @@ session_destroy();
 
 echo "<script>
         alert('Logging out...');
-        window.location.href = 'homepage.html';
+        window.location.href = '../index.html';
     </script>";
 exit();
 ?>
