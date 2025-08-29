@@ -8,7 +8,8 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
-    <link rel="icon" type="image/gif" href="../css/assets/bitlog_coin.png">
+    <link rel="stylesheet" href="../css/loginAndroid.css"
+        media="screen and (min-width: 360px)">
     <link rel="stylesheet" href="../css/loginDesktop.css"
         media="screen and (min-width: 1441px)">
 </head>
@@ -52,6 +53,6 @@ session_start();
             document.getElementById("error-message").style.display = "block";
         }
     </script>
-    
+    </div>
 </body>
 </html>
