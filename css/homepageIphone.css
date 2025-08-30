@@ -70,6 +70,7 @@ html, body {
     background-image: url(assets/homepage_mobile.png);
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 .homepage {
@@ -79,7 +80,7 @@ html, body {
 
 .title img {
     width: 70%;
-    margin: 25% 0 0 0;
+    margin: 21% 0 0 0;
     position: relative;
     animation: pulseGlow 2s ease-in-out infinite,
             pixelPop 1.8s ease-in-out infinite;
@@ -88,8 +89,9 @@ html, body {
 .title{
     font-family: bodytext;
     color: #70480c;
-    font-size: 120%;
+    font-size: 110%;
     text-align: center;
+    position: relative;
 }
 
 .title p {
@@ -108,8 +110,9 @@ html, body {
 
 .buttons {
     display: flex;
+    justify-content: center; 
     gap: 5%;
-    margin: 10% 0 0 17%;
+    margin-top: 10%;
     position: relative;
     animation: pixelBlink  1.3s ease-in-out infinite;
 }
@@ -141,4 +144,14 @@ html, body {
     padding: 10px 25px; 
     display: inline-block; 
     animation: pulseGlow 0.8s ease-in-out infinite;
+}
+
+@media (min-width: 414px) {
+  .title{
+    font-size: 120%;
+  }
+
+  .title img {
+    margin: 25% 0 0 0;
+  }
 }

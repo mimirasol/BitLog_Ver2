@@ -122,8 +122,8 @@ html, body {
     color: #ffde59;
     font-family: subheaderfont;
     background-color: #70480c;
-    font-size: 120%;
-    padding: 15px 55px; 
+    font-size: 220%;
+    padding: 18px 65px; 
     display: inline-block; 
     animation: pulseGlow 0.8s ease-in-out infinite;
 }
@@ -140,8 +140,8 @@ html, body {
     color: #70480c;
     font-family: subheaderfont;
     background-color: #ffde59;
-    font-size: 120%;
-    padding: 15px 46px; 
+    font-size: 220%;
+    padding: 18px 47px; 
     display: inline-block; 
     animation: pulseGlow 0.8s ease-in-out infinite;
 }

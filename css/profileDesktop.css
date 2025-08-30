@@ -192,7 +192,7 @@ button:hover {
     font-family: subheaderfont;
     position: relative;
     margin-left: 112px;
-    margin-bottom: -2px;
+    margin-bottom: -8px;
     margin-top: -8px;
 }
 
@@ -212,7 +212,7 @@ button:hover {
     background-color: #70480c;
     font-size: 18px;
     padding: 15px 40px;
-    margin-top: 35px;
+    margin-top: 40px;
     margin-left: 210px;
     margin-bottom: 20px;
 }

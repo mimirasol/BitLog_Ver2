@@ -88,8 +88,9 @@ html, body {
 .title{
     font-family: bodytext;
     color: #70480c;
-    font-size: 120%;
+    font-size: 105%;
     text-align: center;
+    position: relative;
 }
 
 .title p {
@@ -108,8 +109,9 @@ html, body {
 
 .buttons {
     display: flex;
+    justify-content: center; 
     gap: 5%;
-    margin: 10% 0 0 15%;
+    margin-top: 10%;
     position: relative;
     animation: pixelBlink  1.3s ease-in-out infinite;
 }
