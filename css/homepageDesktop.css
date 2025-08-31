@@ -92,8 +92,8 @@ html, body {
 }
 
 .title p {
-    margin: 0 0 0 10%;
-    font-size: 35px;
+    margin: 0 0 0 -40%;
+    font-size: 200%;
     text-align: left;
 }
 
@@ -122,7 +122,7 @@ html, body {
     color: #ffde59;
     font-family: subheaderfont;
     background-color: #70480c;
-    font-size: 220%;
+    font-size: 150%;
     padding: 18px 65px; 
     display: inline-block; 
     animation: pulseGlow 0.8s ease-in-out infinite;
@@ -140,8 +140,8 @@ html, body {
     color: #70480c;
     font-family: subheaderfont;
     background-color: #ffde59;
-    font-size: 220%;
-    padding: 18px 47px; 
+    font-size: 150%;
+    padding: 18px 52px; 
     display: inline-block; 
     animation: pulseGlow 0.8s ease-in-out infinite;
 }

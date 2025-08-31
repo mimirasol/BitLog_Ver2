@@ -114,18 +114,20 @@ if ($result && $result->num_rows > 0) {
     </div>
 
     <div id="setAllowance" style="display: none;" class="overlay">
-        <button class="closeButton">X</button>
+        <button class="closeButton" id="closeButton">X</button>
         
         <div class="inputBox">
+            <form action="../handlers/setAllowance.php" method="POST" class="allowanceForm">
+                <label for="allowance">allowance</label>
+                <input type="text" id="allowance" name="allowance">
 
-            <label for="allowance">allowance</label>
-            <input type="text">
-            
+                <button type="submit" id="setAllowanceButton">set</button>
+            </form>
         </div>
     </div>
 
     <div id="addItem" style="display: none;" class="overlay">
-        <button class="closeButton">X</button>
+        <button class="closeButton" id="closeButton">X</button>
         
         <div class="inputBox">
 

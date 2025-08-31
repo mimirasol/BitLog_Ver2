@@ -280,9 +280,12 @@ button:hover {
 
 .inputBox {
     background: #fffcf3;
-    border: 3px solid #70480c;
+    border: 5px solid #70480c;
     width: 400px;
     height: 400px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 #addButton {
@@ -292,4 +295,53 @@ button:hover {
 #deleteButton {
     padding-left: 40px;
     padding-right: 40px;
+}
+
+.allowanceForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.allowanceForm input {
+    width: 120%;
+    padding: 5%;
+    margin-bottom: 7%;
+    margin-left: -15%;
+    background-color: #fffcf3;
+    border: 3.5px solid #ffde59;
+    font-family: bodytext;
+    color: #70480c;
+    font-size: 1.3vw;
+}
+
+.allowanceForm label {
+  font-family: subheaderfont;
+  color: #70480c;
+  font-size: 150%;
+  margin-top: 50%;
+  margin-bottom: 10%;
+}
+
+#closeButton {
+  position: absolute;
+  background: transparent;
+  border: none;
+  font-family: subheaderfont;
+  color: #ffde59;
+  font-size: 215%;
+  margin-top: -21%;
+  margin-left: 24%;
+  animation: pulseGlow 0.5s ease-in-out infinite;
+  -webkit-text-stroke: 3px #70480c;
+}
+
+#setAllowanceButton {
+  background: transparent;
+  border: none;
+  font-family: subheaderfont;
+  color: #ffde59;
+  background-color: #70480c;
+  font-size: 23px;
+  cursor: pointer;
+  padding: 15px 70px;
 }

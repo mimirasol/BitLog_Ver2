@@ -92,7 +92,7 @@ html, body {
 }
 
 .title p {
-    margin: 0 0 0 10%;
+    margin: 0 0 0 -38%;
     font-size: 27px;
     text-align: left;
 }
@@ -111,8 +111,8 @@ html, body {
 .buttons {
     display: flex;
     flex-direction: column;
-    gap: 23px;
-    margin: -5% 0 0 10%;
+    gap: 12px;
+    margin: -8% 0 0 10%;
     position: relative;
     animation: pixelBlink  1.3s ease-in-out infinite;
 }
@@ -141,7 +141,8 @@ html, body {
     font-family: subheaderfont;
     background-color: #ffde59;
     font-size: 120%;
-    padding: 10px 43px;  
+    padding: 13px 40px; 
     display: inline-block; 
     animation: pulseGlow 0.8s ease-in-out infinite;
 }
+
