@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="icon" type="image/gif" href="../css/assets/bitlog_coinanimation.gif">
+    <link rel="stylesheet" href="../css/signupAndroid.css"
+        media="screen and (min-width: 360px)">
     <link rel="stylesheet" href="../css/signupDesktop.css"
       media="screen and (min-width: 1441px)">
 </head>
