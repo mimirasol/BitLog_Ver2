@@ -6,10 +6,8 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Log In</title>
-    <link rel="stylesheet" href="../css/loginAndroid.css"
-        media="screen and (min-width: 360px)">
     <link rel="stylesheet" href="../css/loginDesktop.css"
         media="screen and (min-width: 1441px)">
 </head>
@@ -25,7 +23,6 @@ session_start();
         <div class="signupButton">
             <a href="signup.php">SIGN UP</a>
         </div>
-
     </div>
 
     <div class="labelBox">

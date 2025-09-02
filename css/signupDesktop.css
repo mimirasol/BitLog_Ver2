@@ -31,7 +31,6 @@
   }
 }
 
-
 @keyframes pixelBlink {
   0%, 100% {
     filter: brightness(1);
