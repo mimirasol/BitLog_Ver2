@@ -146,7 +146,7 @@ div.content {
     animation: pulseGlow 0.8s ease-in-out infinite;
 }
 
-.button a:hover {
+.button:hover {
     filter: brightness(1.4);
     transform: scale(0.95);
     transition: transform 0.2s ease;
