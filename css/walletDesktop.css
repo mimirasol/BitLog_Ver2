@@ -189,8 +189,10 @@ html, body {
     margin-top: 17px;
     overflow-y: auto; 
     align-items: center;
+    justify-content: center;
     position: relative;
     display: flex;
+    font-size: 30px;
 }
 
 .expensesBox::-webkit-scrollbar {
