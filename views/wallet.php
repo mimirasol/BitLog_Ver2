@@ -49,6 +49,22 @@ if ($result && $result->num_rows > 0) {
         $prices[] = number_format($row['amount'], 2);
     }
 } //result of the query is stored in their respective arrays
+$stmt->close();
+
+$stmt = $conn->prepare("SELECT item_name AS itemList FROM items WHERE user_id = ?");
+$stmt->bind_param ("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+$itemList = [];
+
+if ($result && $result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $itemList[] = htmlspecialchars($row['itemList']);
+    }
+} //result of the query is stored in their respective arrays
+$stmt->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -102,7 +118,7 @@ if ($result && $result->num_rows > 0) {
                                     <span class='itemPrice'>{$prices[$i]}</span></li>";
                         }
                     } else {
-                        echo "<li>No expenses</li>";
+                        echo "No expenses";
                     }
                 ?>
             </ul>
@@ -120,21 +136,48 @@ if ($result && $result->num_rows > 0) {
             <form action="../handlers/setAllowance.php" method="POST" class="allowanceForm">
                 <label for="allowance">allowance</label>
                 <input type="text" id="allowance" name="allowance">
-
                 <button type="submit" id="setAllowanceButton">set</button>
+                
             </form>
         </div>
+        <p id="error-message-allowance" style="display: none;"></p>
     </div>
 
     <div id="addItem" style="display: none;" class="overlay">
         <button class="closeButton" id="closeButton">X</button>
         
         <div class="inputBox">
+            <form action="../handlers/addItem.php" method="POST" class="addForm">
+                <label for="item">add item</label>
+                <input type="text" id="addItem" name="addItem">
 
-            <label for="addItem">item</label>
-            <input type="text">
-            
+                <label for="item" id="amountLabel">amount</label>
+                <input type="text" id="addAmount" name="addAmount">
+
+                <button type="submit" id="addItemButton">add</button>
+            </form>
         </div>
+        <p id="error-message-add" style="display: none; margin-top: 15%;" id="addMessage"></p>
+    </div>
+
+    <div id="deleteItem" style="display: none;" class="overlay">
+        <button class="closeButton" id="closeButton">X</button>
+        
+        <div class="inputBox">
+            <form action="../handlers/deleteItem.php" method="POST" class="deleteForm">
+                <label for="item">delete item</label>
+                <select name="itemsDropdown" id="itemsDropdown">
+                    <?php
+                        foreach ($itemList as $option) {
+                            echo "<option value=\"$option\">$option</option>";
+                        }
+                    ?>
+                </select>
+                
+                <button type="submit" id="deleteItemButton">delete</button>
+            </form>
+        </div>
+        <p id="error-message-delete" style="display: none; margin-top: 10%;" id="deleteMessage"></p>
     </div>
 
     <script>
@@ -150,6 +193,11 @@ if ($result && $result->num_rows > 0) {
             activeDiv.style.display = 'flex';
         });
 
+        document.getElementById("deleteButton").addEventListener("click", ()=> {
+            activeDiv = document.getElementById("deleteItem");
+            activeDiv.style.display = 'flex';
+        });
+
         document.querySelectorAll(".closeButton").forEach(button => {
             button.addEventListener("click", () => {
                 if (activeDiv) {
@@ -158,6 +206,33 @@ if ($result && $result->num_rows > 0) {
                 }
             });
         });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const errorMessage = urlParams.get('error');
+        const errorType = urlParams.get('type');
+
+        if (errorMessage && errorType) {
+            if (errorType === "allowance") {
+                let errorElement = document.getElementById("error-message-allowance");
+                errorElement.textContent = errorMessage;
+                errorElement.style.display = "block";
+                document.getElementById("setAllowance").style.display = 'flex';
+                activeDiv = document.getElementById("setAllowance");
+            } else if (errorType === "add") {
+                let errorElementAdd = document.getElementById("error-message-add");
+                errorElementAdd.textContent = errorMessage;
+                errorElementAdd.style.display = "block";
+                document.getElementById("addItem").style.display = 'flex';
+                activeDiv = document.getElementById("addItem");
+            } else if (errorType === "delete") {
+                let errorElementDelete = document.getElementById("error-message-delete");
+                errorElementDelete.textContent = errorMessage;
+                errorElementDelete.style.display = "block";
+                document.getElementById("deleteItem").style.display = 'flex';
+                activeDiv = document.getElementById("deleteItem");
+            }
+        }
+
     </script>
 </body>
 </html>

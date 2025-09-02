@@ -6,6 +6,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_id = $_SESSION['user_id'];
     $allowance = $_POST['allowance'];
 
+    if (empty($allowance) || !is_numeric($allowance)) {
+        header("Location: ../views/wallet.php?error=Enter+a+valid+allowance&type=allowance");
+        exit();
+    }
+
     $stmt = $conn->prepare("SELECT allowance_id FROM allowances WHERE user_id = ?");
     $stmt->bind_param("i", $user_id);
     $stmt->execute();
@@ -25,6 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($set->execute()) {
             header("location: ../views/wallet.php");
+            exit();
+        } else {
+            header("Location: ../views/wallet.php?error=error+inserting+allowance&type=allowance");
             exit();
         }
     }
