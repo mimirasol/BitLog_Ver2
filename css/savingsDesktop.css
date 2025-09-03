@@ -130,7 +130,7 @@ div.content {
     flex-direction: row;
     gap: 20px;
     justify-content: center;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
     margin-right: 10%;
     position: relative;
     animation: pixelBlink  1.3s ease-in-out infinite;
@@ -181,21 +181,43 @@ div.content {
     color: #ffde59;
     font-family: bodytext;
 }
+.savingsbox #priceText{
+    color: #70480c;
+    font-family: subheaderfont;
+    font-size: 40px;
+}
 
 .listbox {
   position: relative;
-  margin-right: 10%;
+  margin-right: 13%;
   width: 40%;
   height: 50vh;
   background-color: #fffcf3;
   border: 5px solid #70480c;
-  color: #70480c;
-  font-family: subheaderfont;
-  font-size: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.goalItem {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: 5%;
+  padding: 20px 40px;
+  border: 2px solid #70480c;
+  background-color: #fffcf3;
+  color: #70480c;
+  font-family: subheaderfont;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.goalItem:hover {
+  filter: brightness(1.4);
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
 }
 
 html, body {

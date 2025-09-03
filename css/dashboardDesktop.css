@@ -170,22 +170,28 @@ div.content {
   font-size: 26px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+.container .value {
+  margin-left: auto;
+  color: #ffde59;
 }
 
 .allowance {
-  left: 850px;
-  bottom: 420px;
+  left: 680px;
+  bottom: 388px;
+  justify-content: left;
 }
 
 .budget {
-  left: 850px;
-  bottom: 240px;
+  left: 680px;
+  bottom: 187px;
 }
 
 .expenses {
-  left: 850px;
-  bottom: 60px;
+  left: 680px;
+  bottom: -14px;
 }
 
 html, body {
