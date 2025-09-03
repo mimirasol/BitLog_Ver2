@@ -194,6 +194,9 @@ div.content {
   height: 50vh;
   background-color: #fffcf3;
   border: 5px solid #70480c;
+  font-family: subheaderfont;
+  color: #70480c;
+  font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
