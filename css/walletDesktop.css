@@ -188,11 +188,13 @@ html, body {
     margin-left: 720px;
     margin-top: 17px;
     overflow-y: auto; 
-    align-items: center;
-    justify-content: center;
     position: relative;
-    display: flex;
     font-size: 30px;
+}
+
+.expensesBox p {
+  text-align: center;
+  margin-top: 23%;
 }
 
 .expensesBox::-webkit-scrollbar {
@@ -213,13 +215,16 @@ html, body {
 }
 
 .items li {
-    justify-content: space-between;
     border: 3px solid #70480c;
     padding: 19px 25px;
     color: #fffcf3;
     margin-bottom: 20px;
     display: flex;
+    justify-content: space-between;
     position: relative;
+    align-items: center; /* keeps text aligned vertically */
+    width: 100%; /* ensures full line usage for spacing */
+    box-sizing: border-box;
 }
 
 .itemName {

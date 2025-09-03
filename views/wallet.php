@@ -118,7 +118,7 @@ $stmt->close();
                                     <span class='itemPrice'>{$prices[$i]}</span></li>";
                         }
                     } else {
-                        echo "No expenses";
+                        echo "<p>No expenses</p>";
                     }
                 ?>
             </ul>
