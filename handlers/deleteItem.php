@@ -11,12 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
-    $stmt = $conn->prepare("DELETE e FROM expenses e JOIN items i  ON e.item_id = i.item_id WHERE item_name = ? AND user_id = ?");
-    $stmt->bind_param("si", $selectedItem, $user_id);
+    $stmt = $conn->prepare("DELETE FROM expenses WHERE item_id = ?");
+    $stmt->bind_param("i", $selectedItem);
 
     if ($stmt->execute()) {
-        $stmt = $conn->prepare("DELETE FROM items where item_name = ? AND user_id = ?"); 
-        $stmt->bind_param("si", $selectedItem, $user_id);
+        $stmt = $conn->prepare("DELETE FROM items where item_id = ? AND user_id = ?"); 
+        $stmt->bind_param("ii", $selectedItem, $user_id);
         
         if ($stmt->execute()) {
             header("location: ../views/wallet.php");

@@ -51,7 +51,7 @@ if ($result && $result->num_rows > 0) {
 } //result of the query is stored in their respective arrays
 $stmt->close();
 
-$stmt = $conn->prepare("SELECT item_name AS itemList FROM items WHERE user_id = ?");
+$stmt = $conn->prepare("SELECT item_name AS itemList, item_id AS item_id FROM items WHERE user_id = ?");
 $stmt->bind_param ("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -60,7 +60,10 @@ $itemList = [];
 
 if ($result && $result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $itemList[] = htmlspecialchars($row['itemList']);
+        $itemList[] = [
+            'id'=> htmlspecialchars($row['item_id']),
+            'item_name' => htmlspecialchars($row['itemList'])
+        ];
     }
 } //result of the query is stored in their respective arrays
 $stmt->close();
@@ -169,7 +172,7 @@ $stmt->close();
                 <select name="itemsDropdown" id="itemsDropdown">
                     <?php
                         foreach ($itemList as $option) {
-                            echo "<option value=\"$option\">$option</option>";
+                            echo "<option value=\"{$option['id']}\">{$option['item_name']}</option>";
                         }
                     ?>
                 </select>
