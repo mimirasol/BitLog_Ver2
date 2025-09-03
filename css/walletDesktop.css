@@ -222,8 +222,8 @@ html, body {
     display: flex;
     justify-content: space-between;
     position: relative;
-    align-items: center; /* keeps text aligned vertically */
-    width: 100%; /* ensures full line usage for spacing */
+    align-items: center; 
+    width: 100%; 
     box-sizing: border-box;
 }
 
@@ -231,6 +231,10 @@ html, body {
     color: #ffbf00;
     font-family: bodytext;
     font-size: 45px;
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .itemPrice {
