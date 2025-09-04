@@ -106,6 +106,23 @@ if ($result && $result->num_rows > 0) {
    </div>
   </div>
 
+  <div id="addItem" style="display: none;" class="overlay">
+        <button class="closeButton" id="closeButton">X</button>
+        
+        <div class="inputBox">
+            <form action="../handlers/addSaving.php" method="POST" class="addForm">
+                <label for="item">add item</label>
+                <input type="text" id="addItem" name="addItem">
+
+                <label for="item" id="amountLabel">target amount</label>
+                <input type="text" id="addAmount" name="addAmount">
+
+                <button type="submit" id="addItemButton">add</button>
+            </form>
+        </div>
+        <p id="error-message-add" style="display: none; margin-top: 15%;" id="addMessage"></p>
+    </div>
+
   <script> //showing list
       let activeDiv = null; // global variable
 
