@@ -268,10 +268,10 @@ button:hover {
     color: #ffde59;
     font-family: bodytext;
 }
-.savingsbox #priceText{
+.savingsbox #goalText{
     color: #70480c;
     font-family: subheaderfont;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .listbox {
@@ -320,7 +320,9 @@ button:hover {
 .goalItem .itemPrice {
   flex-shrink: 0;            /* don't shrink */
   margin-left: 20px;
-  color: #70480c;
+  color: #ffde59;
+  font-family: bodytext;
+  font-size: 50px;
 }
 
 .goalItem:hover {
