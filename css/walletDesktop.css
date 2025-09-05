@@ -228,7 +228,7 @@ html, body {
 }
 
 .itemName {
-    color: #ffbf00;
+    color: #70480c;
     font-family: bodytext;
     font-size: 45px;
     width: 50%;
@@ -238,9 +238,9 @@ html, body {
 }
 
 .itemPrice {
-    color: #70480c;
+    color: #ffbf00;
     font-family: subheaderfont;
-    font-size: 25px;
+    font-size: 23px;
     padding-top: 10px;
 }
 
@@ -451,5 +451,13 @@ button:hover {
   filter: brightness(1.5);
     transform: scale(0.9);
     transition: 0.2s;
+}
+
+.savingsButton {
+  animation: pulseGlow 1.5s ease-in-out infinite;
+}
+
+.content button {
+  animation: pulseGlow 1.5s ease-in-out infinite;
 }
 
