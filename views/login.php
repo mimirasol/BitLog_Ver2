@@ -8,6 +8,8 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Log In</title>
+    <link rel="stylesheet" href="../css/loginAndroid.css"
+        media="screen and (min-width: 340px)">
     <link rel="stylesheet" href="../css/loginDesktop.css"
         media="screen and (min-width: 1441px)">
 </head>
@@ -17,13 +19,13 @@ session_start();
             <img src="../css/assets/bitlog.png" id="bitlog">
             <p>Embark on a pixel-powered money quest where you manage your 
                 <br>gold, defeat overspending, and unlock savings milestones!</p>
-        </div>
 
-    <div class="buttons">
-        <div class="signupButton">
-            <a href="signup.php">SIGN UP</a>
-        </div>
+            <div class="buttons">
+                <div class="signupButton">
+                    <a href="signup.php">SIGN UP</a>
+                </div>
     </div>
+        </div>
 
     <div class="labelBox">
         <p>LOG IN</p>
