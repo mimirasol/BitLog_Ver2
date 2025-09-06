@@ -136,16 +136,6 @@ div.content {
     animation: pixelBlink  1.3s ease-in-out infinite;
 }
 
-.button a {
-    text-decoration: none;
-    color: #70480c ;
-    font-family: subheaderfont;
-    background-color: #ffde59;
-    font-size: 1.2vw;
-    padding: 15px 70px; 
-    animation: pulseGlow 0.8s ease-in-out infinite;
-}
-
 button:hover {
     filter: brightness(1.4);
     transform: scale(0.95);
@@ -171,6 +161,12 @@ button:hover {
     font-size: 23px;
     cursor: pointer;
     padding: 15px 70px;
+}
+
+#deleteButton {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 5vh;
 }
 
 .overlay {
@@ -209,16 +205,52 @@ button:hover {
   -webkit-text-stroke: 3px #70480c;
 }
 
+.allowanceForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.allowanceForm input {
+    width: 94%;
+    padding: 2%;
+    margin-bottom: 7%;
+    margin-left: 0%;
+    background-color: #fffcf3;
+    border: 3.5px solid #ffde59;
+    font-family: bodytext;
+    color: #70480c;
+    font-size: 1.3vw;
+}
+
+.allowanceForm label {
+  font-family: subheaderfont;
+  color: #70480c;
+  font-size: 120%;
+  margin-top: 45%;
+  margin-bottom: 10%;
+}
+
+#setAllowanceButton {
+  background: transparent;
+  border: none;
+  font-family: subheaderfont;
+  color: #ffde59;
+  background-color: #70480c;
+  font-size: 23px;
+  cursor: pointer;
+  padding: 15px 70px;
+}
+
 .addForm {
   display: flex;
   flex-direction: column;
 }
 
 .addForm input {
-    width: 120%;
+    width: 94%;
     padding: 2%;
     margin-bottom: 7%;
-    margin-left: -15%;
+    margin-left: 0%;
     background-color: #fffcf3;
     border: 3.5px solid #ffde59;
     font-family: bodytext;
@@ -229,8 +261,8 @@ button:hover {
 .addForm label {
   font-family: subheaderfont;
   color: #70480c;
-  font-size: 150%;
-  margin-top: 40%;
+  font-size: 130%;
+  margin-top: 30%;
   margin-bottom: 6%;
 }
 
@@ -247,6 +279,42 @@ button:hover {
 
 #amountLabel {
   margin-top: -1%;
+}
+
+.deleteForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.deleteForm select {
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 7%;
+    left: -15%;
+    background-color: #fffcf3;
+    border: 3.5px solid #ffde59;
+    font-family: bodytext;
+    color: #70480c;
+    font-size: 1.3vw;
+}
+
+.deleteForm label {
+  font-family: subheaderfont;
+  color: #70480c;
+  font-size: 150%;
+  margin-top: 42%;
+  margin-bottom: 6%;
+}
+
+#deleteItemButton {
+  background: transparent;
+  border: none;
+  font-family: subheaderfont;
+  color: #ffde59;
+  background-color: #70480c;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 45px;
 }
 
 .savingsbox {
@@ -284,33 +352,39 @@ button:hover {
   font-family: subheaderfont;
   color: #70480c;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  overflow-y: auto;
-  gap: 5%;
+  display: block;          /* let children flow naturally */
+  overflow-y: auto;        /* scroll if overflowing */
+  padding: 20px;           /* add some spacing inside */
+  box-sizing: border-box;
+}
+
+.listbox::-webkit-scrollbar {
+    width: 0.3vw;
+}
+
+.listbox::-webkit-scrollbar-thumb {
+    background-color: #ffbf00;
+    border-radius: 0.5vw;
 }
 
 .content .goalItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   padding: 20px 40px;
+  margin-bottom: 15px;
   border: 2px solid #70480c;
   background-color: #fffcf3;
   color: #70480c;
-  font-family: subheaderfont;
-  font-size: 30px;
+  font-family: bodytext;
+  font-size: 50px;
   cursor: pointer;
   overflow: hidden;
 }
 
 .goalItem .itemName {
-  flex: 1;                   /* take remaining space */
   min-width: 0;              /* REQUIRED for text-overflow to work in flex */
-  overflow: hidden;
   text-overflow: ellipsis;   /* add "..." */
   white-space: nowrap;       /* keep it on one line */
   text-align: left;
@@ -321,8 +395,8 @@ button:hover {
   flex-shrink: 0;            /* don't shrink */
   margin-left: 20px;
   color: #ffde59;
-  font-family: bodytext;
-  font-size: 50px;
+  font-family: subheaderfont;
+  font-size: 25px;
 }
 
 .goalItem:hover {
