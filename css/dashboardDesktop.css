@@ -69,13 +69,13 @@
   height: 100%;
   overflow: auto;
   border-right: 5px solid #70480c;
+  flex-direction: column !important;
 }
 
 .sidebar .icon {
   background: transparent;
   border: none;
-  padding: 10px;
-  margin: 50px 0;
+  margin-bottom: 20px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -96,11 +96,10 @@
 .sidebar .logo {
   background: transparent;
   border: none;
-  margin: 50px 0;
   cursor: pointer;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
 
 .sidebar .logo img {
@@ -120,7 +119,7 @@
 }
 
 div.content {
-  margin-left: 340px;
+  margin-left: 320px;
   padding-top: 200px;
   animation: pixelBounce 2.5s ease-in-out infinite;
 }
@@ -173,9 +172,12 @@ div.content {
   justify-content: space-between;
   padding: 20px 40px;
 }
+
 .container .value {
   margin-left: auto;
   color: #ffde59;
+  font-size: 4vw; 
+  font-family: bodytext;
 }
 
 .allowance {
