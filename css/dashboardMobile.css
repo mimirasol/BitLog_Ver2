@@ -75,7 +75,7 @@
   background: transparent;
   border: none;
   padding: 0;
-  margin: 0 8px; /* small gap between icons */
+  margin: 0 8px;
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -153,8 +153,7 @@ div.content {
 }
 
 .character-wrapper img {
-  width: 70vw;
-  max-width: 300px;
+  width: 50vw;
 }
 
 .overlay-text{
