@@ -346,15 +346,15 @@ button:hover {
   position: relative;
   margin-right: 13%;
   width: 40%;
-  height: 50vh;
+  height: 40vh;
   background-color: #fffcf3;
   border: 5px solid #70480c;
   font-family: subheaderfont;
   color: #70480c;
   font-size: 30px;
-  display: block;          /* let children flow naturally */
-  overflow-y: auto;        /* scroll if overflowing */
-  padding: 20px;           /* add some spacing inside */
+  display: block;          
+  overflow-y: auto;        
+  padding: 20px;           
   box-sizing: border-box;
 }
 
@@ -384,15 +384,13 @@ button:hover {
 }
 
 .goalItem .itemName {
-  min-width: 0;              /* REQUIRED for text-overflow to work in flex */
-  text-overflow: ellipsis;   /* add "..." */
-  white-space: nowrap;       /* keep it on one line */
+  min-width: 0;
+  white-space: nowrap;
   text-align: left;
 }
 
-/* Price always visible on the right */
 .goalItem .itemPrice {
-  flex-shrink: 0;            /* don't shrink */
+  flex-shrink: 0;
   margin-left: 20px;
   color: #ffde59;
   font-family: subheaderfont;
@@ -403,6 +401,31 @@ button:hover {
   filter: brightness(1.4);
   transform: scale(0.95);
   transition: transform 0.2s ease;
+}
+
+.walletButton {
+    margin-left: 47%;
+    margin-top: -5.1%;
+}
+
+.walletButton a{
+    text-decoration: none;
+    color: #ffde59;
+    font-family: subheaderfont;
+    background-color: #70480c;
+    font-size: 30px;
+    padding: 25px 224.4px; 
+    display: inline-block;
+}
+
+.walletButton a:hover {
+  filter: brightness(1.5);
+  transform: scale(0.9);
+  transition: 0.2s;
+}
+
+.walletButton {
+  animation: pulseGlow 1.5s ease-in-out infinite;
 }
 
 html, body {

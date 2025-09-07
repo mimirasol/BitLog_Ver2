@@ -62,20 +62,23 @@
 
 .sidebar {
   margin: 0;
-  padding: 0 0 10px 70px;
+  padding: 3% 1% 10% 68px;
   width: 90px;
+  display: flex;
   background-color: #fffcf3;
   position: fixed;
   height: 100%;
   overflow: auto;
   border-right: 5px solid #70480c;
+  justify-content: flex-start !important;
+  flex-direction: column !important;
+  z-index: 1000; 
 }
 
 .sidebar .icon {
   background: transparent;
   border: none;
-  padding: 10px;
-  margin: 50px 0;
+  margin-top: 80%;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -96,11 +99,10 @@
 .sidebar .logo {
   background: transparent;
   border: none;
-  margin: 50px 0;
   cursor: pointer;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
 
 .sidebar .logo img {
@@ -116,8 +118,8 @@
 
 .logout {
   position: absolute;
-  bottom: 20px;
-}
+  bottom: 27%;
+}z
 
 div.content {
   margin-left: 340px;
@@ -165,6 +167,7 @@ div.content {
 .profile {
   height: 40px;
     width: 40px;
+    margin-top: 80%;
     background-color: #ffde59;
     border: 2px solid #70480c;
     box-shadow: 7px 5px #70480c;

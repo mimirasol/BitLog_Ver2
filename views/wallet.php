@@ -108,9 +108,15 @@ $stmt->close();
     <div class="content">
         <button id="setButton">SET</button>
 
-        <div class="container allowance">Allowance <?php echo $allowance; ?></div>
-        <div class="container budget">Budget <?php echo number_format($budget, 2, '.', ''); ?></div>
-        <div class="container expenses">Expenses <?php echo $total_expenses; ?></div>
+        <div class="container allowance">Allowance 
+            <span class="value"><?php echo $allowance; ?></span>
+        </div>
+        <div class="container budget">Budget
+            <span class="value"><?php echo number_format($budget, 2, '.', ''); ?></span>
+        </div>
+        <div class="container expenses">Expenses
+            <span class="value"><?php echo $total_expenses; ?></span>
+        </div>
 
         <div class="itemsButton">
             <button id="addButton">ADD</button>

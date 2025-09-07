@@ -123,6 +123,9 @@ $stmt->close();
           ?>
       </div>
    </div>
+   <div class="walletButton">
+     <a href="wallet.php">wallet</a>
+   </div>
   </div>
 
   <div id="setAllowance" style="display: none;" class="overlay">
