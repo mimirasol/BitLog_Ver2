@@ -25,8 +25,10 @@ $stmt->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="icon" type="image/gif" href="../css/assets/bitlog_coin.png">
+    <link rel="stylesheet" href="../css/profileMobile.css"
+      media="screen and (min-width: 320px)">
     <link rel="stylesheet" href="../css/profileDesktop.css"
-      media="screen and (min-width: 1441px)">
+      media="screen and (min-width: 1000px)">
 </head>
 <body>
   <div class="sidebar">
