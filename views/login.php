@@ -8,10 +8,11 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Log In</title>
-    <link rel="stylesheet" href="../css/loginAndroid.css"
-        media="screen and (min-width: 340px)">
+    <link rel="icon" type="image/gif" href="css/assets/bitlog_coinanimation.gif">
+    <link rel="stylesheet" href="../css/loginMobile.css"
+        media="screen and (min-width: 320px)">
     <link rel="stylesheet" href="../css/loginDesktop.css"
-        media="screen and (min-width: 1441px)">
+        media="screen and (min-width: 1000px">
 </head>
 <body>
     <div class="signupPage">
@@ -24,7 +25,7 @@ session_start();
                 <div class="signupButton">
                     <a href="signup.php">SIGN UP</a>
                 </div>
-    </div>
+            </div>
         </div>
 
     <div class="labelBox">
@@ -38,9 +39,9 @@ session_start();
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
-            <p id="error-message" style="display: none;"></p>
 
             <button type="submit" class="submitButton">enter</button>
+            <p id="error-message" style="display: none;"></p>
         </form>
     </div>
 

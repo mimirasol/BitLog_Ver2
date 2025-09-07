@@ -78,8 +78,8 @@ html, body {
 }
 
 .title img {
-    width: 30%;
-    margin: 8% 0 0 13%;
+    width: 60vh;
+    margin: 19vh 0 0 0;
     position: relative;
     animation: pulseGlow 2s ease-in-out infinite,
             pixelPop 1.8s ease-in-out infinite;
@@ -88,20 +88,20 @@ html, body {
 .title{
     font-family: bodytext;
     color: #70480c;
-    font-size: 120%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40vw;
 }
 
 .title p {
-    margin: 0 0 0 14%;
-    font-size: 32px;
-    text-align: left;
+    font-size: 1.7vw;
 }
 
 .buttons { 
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin: 4% 0 0 14%;
+    margin: 1vh 0 0 0;
     position: relative;
     animation: pixelBlink  1.3s ease-in-out infinite;
 }
@@ -112,7 +112,7 @@ html, body {
     font-family: subheaderfont;
     background-color: #ffde59;
     font-size: 1.2vw;
-    padding: 15px 70px; 
+    padding: 2.6vh 3.5vw; 
     display: inline-block; 
     animation: pulseGlow 0.8s ease-in-out infinite;
 }
@@ -126,25 +126,24 @@ html, body {
 .signupBox {
     border: 5px solid #70480c;
     background-color: #fffaf0; 
-    width: 28%; 
-    margin: 50px auto;
+    width: 29vw;
+    height: 60vh;
     padding: 100px; 
     box-sizing: border-box;
     margin-left: 57%;
-    margin-top: -22%;
+    margin-top: 1.5vh;
     text-align: center;
 }
 
 .labelBox {
     border: 5px solid #70480c;
     background-color: #fffaf0;
-    width: 28%; 
-    padding: 15px 12px;
+    width: 29vw; 
+    height: 6vh;
+    padding: 1.8vh 2vh;
     box-sizing: border-box;
-    position: absolute;
-    top: 200px; 
-    left: 71%;
-    transform: translateX(-50%);
+    position: relative;
+    margin: -50vh auto -2vh 57vw;
 }
 
 .labelBox p {
@@ -157,25 +156,29 @@ html, body {
 .signupForm {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2vh;
 }
 
 .signupForm input {
-    width: 90%;
-    padding: 5%;
+    width: 15vw;
+    padding: 0.5vw;
     margin-bottom: 7%;
     margin-left: 0.5%;
     background-color: #fffcf3;
     border: 3.5px solid #70480c;
     font-family: bodytext;
     color: #70480c;
-    font-size: 1.3vw;
+    font-size: 1.8vw;
 }
 
 .signupForm label {
     font-family: bodytext;
     color: #70480c;
     font-size: 1.8vw;
-    margin-left: -65%;
+    margin-left: 19vw;
     margin-bottom: 2%;
 }
 
@@ -183,24 +186,23 @@ html, body {
     background: none;
     border: none;
     font-family: subheaderfont;
-    width: 10%;
     color: #70480c;
     font-size: 1.6vw;
     cursor: pointer;
-    margin-left: 25%;
-    margin-top: 20%;
-    margin-bottom: -15%;
+    margin-top: 1.3vh;
 }
 
 .submitButton:hover {
-    filter: brightness(3);
-    transition: filter 0.3s ease;
+    filter: brightness(1.5);
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
 }
 
 .signupBox p {
   color: red;
+  font-size: 0.8vw;
   font-family: subheaderfont;
-  margin-bottom: -9%;
+  margin-bottom: -5vh;
 }
 
 

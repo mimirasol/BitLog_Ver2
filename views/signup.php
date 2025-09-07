@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Sign Up</title>
+    <link rel="icon" type="image/gif" href="css/assets/bitlog_coinanimation.gif">
+    <link rel="stylesheet" href="../css/signupMobile.css"
+        media="screen and (min-width: 320px)">
     <link rel="stylesheet" href="../css/signupDesktop.css"
-        media="screen and (min-width: 1441px)">
+        media="screen and (min-width: 1000px)">
 </head>
 <body>
     <div class="signupPage">
@@ -13,14 +16,13 @@
             <img src="../css/assets/bitlog.png" id="bitlog">
             <p>Embark on a pixel-powered money quest where you manage your 
                 <br>gold, defeat overspending, and unlock savings milestones!</p>
-        </div>
 
-    <div class="buttons">
-        <div class="loginButton">
-            <a href="login.php">LOG IN</a>
+            <div class="buttons">
+                <div class="signupButton">
+                    <a href="login.php">LOG IN</a>
+                </div>
+            </div>
         </div>
-
-    </div>
 
     <div class="labelBox">
         <p>SIGN UP</p>

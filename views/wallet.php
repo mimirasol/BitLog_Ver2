@@ -77,8 +77,10 @@ $stmt->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="icon" type="image/gif" href="../css/assets/bitlog_coin.png">
+    <link rel="stylesheet" href="../css/walletMobile.css"
+        media="screen and (min-width: 320px)">
     <link rel="stylesheet" href="../css/walletDesktop.css"
-      media="screen and (min-width: 1441px)">
+      media="screen and (min-width: 1025px)">
 </head>
 <body>
   <div class="sidebar">
@@ -110,8 +112,11 @@ $stmt->close();
         <div class="container budget">Budget <?php echo number_format($budget, 2, '.', ''); ?></div>
         <div class="container expenses">Expenses <?php echo $total_expenses; ?></div>
 
-        <button id="addButton">ADD</button>
-        <button id="deleteButton">DELETE</button>
+        <div class="itemsButton">
+            <button id="addButton">ADD</button>
+            <button id="deleteButton">DELETE</button>
+        </div>
+        
         <div class="expensesBox">
             <ul class = "items">
                 <?php
@@ -160,7 +165,7 @@ $stmt->close();
                 <button type="submit" id="addItemButton">add</button>
             </form>
         </div>
-        <p id="error-message-add" style="display: none; margin-top: 15%;" id="addMessage"></p>
+        <p id="error-message-add" style="display: none; margin-top: 38vh;"></p>
     </div>
 
     <div id="deleteItem" style="display: none;" class="overlay">
