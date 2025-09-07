@@ -80,7 +80,7 @@ $stmt->close();
     <link rel="stylesheet" href="../css/walletMobile.css"
         media="screen and (min-width: 320px)">
     <link rel="stylesheet" href="../css/walletDesktop.css"
-      media="screen and (min-width: 1025px)">
+      media="screen and (min-width: 1000px)">
 </head>
 <body>
   <div class="sidebar">
@@ -151,10 +151,10 @@ $stmt->close();
                 <label for="allowance">allowance</label>
                 <input type="text" id="allowance" name="allowance">
                 <button type="submit" id="setAllowanceButton">set</button>
+                <p id="error-message-allowance" style="display: none;"></p>
                 
             </form>
         </div>
-        <p id="error-message-allowance" style="display: none;"></p>
     </div>
 
     <div id="addItem" style="display: none;" class="overlay">
@@ -169,9 +169,9 @@ $stmt->close();
                 <input type="text" id="addAmount" name="addAmount">
 
                 <button type="submit" id="addItemButton">add</button>
+                <p id="error-message-add" style="display: none;"></p>
             </form>
         </div>
-        <p id="error-message-add" style="display: none; margin-top: 38vh;"></p>
     </div>
 
     <div id="deleteItem" style="display: none;" class="overlay">
@@ -189,9 +189,9 @@ $stmt->close();
                 </select>
                 
                 <button type="submit" id="deleteItemButton">delete</button>
+                <p id="error-message-delete" style="display: none; margin-top: 3vh;" id="deleteMessage"></p>
             </form>
         </div>
-        <p id="error-message-delete" style="display: none; margin-top: 10%;" id="deleteMessage"></p>
     </div>
 
     <script>

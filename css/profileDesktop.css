@@ -122,15 +122,14 @@
 }
 
 div.content {
-    margin-left: 400px;
-    padding-top: 170px;
+    padding-top: 15vh;
     animation: pixelBounce 2.5s ease-in-out infinite;
     position: relative;
 }
 
 .character-wrapper {
-    height: 550px;
-    width: 550px;
+    height: 50vh;
+    width: 27vw;
     background-color: #ffde59;
     border: 2px solid #70480c;
     box-shadow: 16px 13px #70480c;
@@ -139,10 +138,11 @@ div.content {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    margin-right: 30vw;
 }
 
 .character-wrapper img {
-    width: 450px;
+    width: 24vw;
 }
 
 html, body {
@@ -169,14 +169,14 @@ button:hover {
 }
 
 #prevButton {
-    left: -100px;
-    top: 430px;
+    margin-left: 15vw;
+    top: 45vh;
     position: absolute;
 }
 
 #nextButton {
-    right: 850px;
-    top: 425px;
+    margin-left: -32vw;
+    top: 45vh;
     position: absolute;
 }
 
@@ -186,45 +186,34 @@ button:hover {
     font-size: 35px;
     padding: 15px 75px;
     margin-top: 60px;
-    margin-left: 150px;
-}
-
-.userInfo p {
-    color: red;
-    font-family: subheaderfont;
+    margin-right: 30vw;
     position: relative;
-    margin-left: 112px;
-    margin-bottom: -8px;
-    margin-top: -8px;
 }
 
 .userInfo {
-  margin-left: 750px;
+  margin-left: 50vw;
   border: 5px solid #70480c;
     background-color: #fffaf0;
-    width: 40%; 
+    width: 31vw; 
     padding: 15px 12px;
     box-sizing: border-box;
-    position: absolute;
-    top: 338px;
+    position: relative;
+    top: 23.5vh;
 }
 
 .userInfo button {
   color: #ffde59 !important;
     background-color: #70480c;
-    font-size: 18px;
-    padding: 15px 40px;
-    margin-top: 40px;
-    margin-left: 210px;
-    margin-bottom: 20px;
+    font-size: 1.2vw;
+    padding: 1.5vh 3.5vw;
+    margin-top: -1vh;
 }
 
 .userInfo input {
-  width: 45%;
+    width: 15vw;
     padding: 3%;
-    margin-bottom: 7%;
-    margin-left: 230px;
-    margin-top: -100px;
+    margin-left: 10vw;
+    margin-top: -6vh;
     background-color: #fffcf3;
     border: 3.5px solid #70480c;
     font-family: bodytext;
@@ -243,21 +232,28 @@ button:hover {
   font-family: subheaderfont;
   color: #70480c;
   font-size: 1.5vw;
-  margin-left: 30px;
-  display: inline-block;
-  margin-top: 60px;
+  margin-left: -17vw;
+  margin-top: 8vh;
+}
+
+.userInfo p {
+    color: red;
+    font-family: subheaderfont;
+    position: relative;
+    font-size: 1vw;
+    margin-top: 4vh;
 }
 
 .labelBox {
     border: 5px solid #70480c;
     background-color: #fffaf0;
-    width: 40%; 
+    width: 31vw; 
     padding: 15px 12px;
     box-sizing: border-box;
-    position: absolute;
-    top: 280px; 
-    left: 69.6%;
-    transform: translateX(-50%);
+    position: relative;
+    top: 22.1vh; 
+    left: 20vw;
+    margin: -79vh auto -2vh 39.5vw;;
 }
 
 .labelBox p {
@@ -285,4 +281,9 @@ button:hover {
   filter: brightness(1.3);
   transform: scale(0.9);
   transition: 0.2s;
+}
+
+#username::placeholder {
+  font-size: 2.5vw;
+  padding-left: 0.5vw;
 }

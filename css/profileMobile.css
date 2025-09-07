@@ -134,15 +134,16 @@
 }
 
 div.content {
-    margin-left: 400px;
-    padding-top: 170px;
     animation: pixelBounce 2.5s ease-in-out infinite;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .character-wrapper {
-    height: 550px;
-    width: 550px;
+    height: 28vh;
+    width: 60vw;
     background-color: #ffde59;
     border: 2px solid #70480c;
     box-shadow: 16px 13px #70480c;
@@ -151,10 +152,11 @@ div.content {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    margin-top: 5vh;
 }
 
 .character-wrapper img {
-    width: 450px;
+    width: 50vw;
 }
 
 html, body {
@@ -172,7 +174,7 @@ html, body {
     border: none;
     font-family: subheaderfont;
     color: #70480c;
-    font-size: 70px;
+    font-size: 15vw;
     cursor: pointer;
 }
 
@@ -183,67 +185,62 @@ button:hover {
 }
 
 #prevButton {
-    left: -100px;
-    top: 430px;
+    left: 1vw;
+    top: 18vh;
     position: absolute;
 }
 
 #nextButton {
-    right: 850px;
-    top: 425px;
+    left: 83vw;
+    top: 18vh;
     position: absolute;
 }
 
 .setButton button {
     color: #ffde59 !important;
     background-color: #70480c;
-    font-size: 35px;
-    padding: 15px 75px;
-    margin-top: 60px;
-    margin-left: 150px;
+    font-size: 4.8vw;
+    padding: 1.5vh 13vw;
+    margin-top: 3.8vh;
 }
 
 .userInfo p {
     color: red;
     font-family: subheaderfont;
     position: relative;
-    margin-left: 112px;
-    margin-bottom: -8px;
-    margin-top: -8px;
+    margin-top: 4vh;
+    font-size: 2.5vw;
+    white-space: nowrap;
 }
 
 .userInfo {
-  margin-left: 750px;
-  border: 5px solid #70480c;
+  border: 3px solid #70480c;
     background-color: #fffaf0;
-    width: 40%; 
+    width: 76vw;
+    height: 35vh; 
     padding: 15px 12px;
     box-sizing: border-box;
-    position: absolute;
-    top: 338px;
+    position: relative;
 }
 
 .userInfo button {
   color: #ffde59 !important;
     background-color: #70480c;
-    font-size: 18px;
-    padding: 15px 40px;
-    margin-top: 40px;
-    margin-left: 210px;
-    margin-bottom: 20px;
+    font-size: 4vw;
+    padding: 1.7vh 10vw;
 }
 
 .userInfo input {
-  width: 45%;
+    width: 50vw;
+    height: 3vh;
     padding: 3%;
     margin-bottom: 7%;
-    margin-left: 230px;
-    margin-top: -100px;
+    margin-top: 2vh;
     background-color: #fffcf3;
-    border: 3.5px solid #70480c;
+    border: 2px solid #70480c;
     font-family: bodytext;
     color: #70480c;
-    font-size: 1.8vw;
+    font-size: 7vw;
     position: relative;
 }
 
@@ -256,27 +253,36 @@ button:hover {
 .userInfo label {
   font-family: subheaderfont;
   color: #70480c;
-  font-size: 1.5vw;
-  margin-left: 30px;
+  font-size: 4.5vw;
+  margin-left: 4vw;
   display: inline-block;
-  margin-top: 60px;
+  margin-top: 2.5vh;
+}
+
+#username::placeholder {
+  font-size: 7vw;
+  padding-left: 19vw;
 }
 
 .labelBox {
-    border: 5px solid #70480c;
+    border: 3px solid #70480c;
     background-color: #fffaf0;
-    width: 40%; 
-    padding: 15px 12px;
+    width: 76vw;
+    padding: 1.5px 12px;
     box-sizing: border-box;
-    position: absolute;
-    top: 280px; 
-    left: 69.6%;
-    transform: translateX(-50%);
+    position: relative;
+    margin-top: 4vh;
+    margin-bottom: -1vh;
 }
 
 .labelBox p {
     font-family: subheaderfont;
     color: #70480c;
-    font-size: 1.2vw;
-    margin: 0;
+    font-size: 3vw;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

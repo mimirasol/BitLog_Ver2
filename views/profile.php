@@ -76,14 +76,14 @@ $stmt->close();
       </div>
 
     <div class="userInfo">
-        <form action="../handlers/editUsername.php" method="POST">
+        <form action="../handlers/editUsername.php" method="POST" class="editForm">
             <label for="editName">Name:</label>
             <?php
                 echo '<input type="text" id="username" name="editUsername" placeholder="'.$username . '">';
             ?>
-            <p id="errorMessage" style="display: none;"></p>
-            <p id="confirmationMessage" style="display: none; margin-left: 150px;"></p>
             <button type="submit" id="setUsername">edit</button>
+            <p id="errorMessage" style="display: none;"></p>
+            <p id="confirmationMessage" style="display: none;"></p>
         </form>
     </div>
     </div>

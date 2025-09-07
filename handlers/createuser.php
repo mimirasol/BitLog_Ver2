@@ -30,10 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $stmt->bind_param("ss", $username, $password_hash);
 
         if($stmt->execute()) {
-             echo "<script>
-                alert('Account successfully created! Redirecting to log in...');
-                window.location.href = '../views/login.php';
-            </script>";
+            $_SESSION['user_id'] = $conn->insert_id; 
+            $_SESSION['username'] = $username;
+            header("Location: ../views/dashboard.php");
             exit();
         } else {
             $error = "Error inserting user: " . $stmt->error;
