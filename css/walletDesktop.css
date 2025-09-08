@@ -316,8 +316,8 @@ button:hover {
 .inputBox {
     background: #fffcf3;
     border: 5px solid #70480c;
-    width: 400px;
-    height: 400px;
+    width: 25vw;
+    height: 45vh;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -376,20 +376,21 @@ button:hover {
 }
 
 .addForm input {
-    width: 120%;
-    padding: 0.8vh;
+    width: 15vw;
+    height: 30vh;
+    padding: 1.2vh;
     margin-bottom: 7%;
     background-color: #fffcf3;
     border: 3.5px solid #ffde59;
     font-family: bodytext;
     color: #70480c;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
 }
 
 .addForm label {
   font-family: subheaderfont;
   color: #70480c;
-  font-size: 150%;
+  font-size: 1.4vw;
   margin-top: 6vh;
   margin-bottom: 6%;
 }
@@ -424,14 +425,13 @@ button:hover {
 }
 
 #closeButton {
-  position: absolute;
+  position: relative;
   background: transparent;
   border: none;
   font-family: subheaderfont;
   color: #ffde59;
-  font-size: 215%;
-  margin-top: -21%;
-  margin-left: 24%;
+  font-size: clamp(18px, 20vw, 50px);
+  margin-top: -50vh;
   animation: pulseGlow 0.5s ease-in-out infinite;
   -webkit-text-stroke: 3px #70480c;
 }
@@ -445,6 +445,7 @@ button:hover {
   font-size: 1.3vw;
   cursor: pointer;
   width: 10vw;
+  margin-bottom: 3vh;
 }
 
 #addItemButton {
@@ -467,6 +468,7 @@ button:hover {
   font-size: 20px;
   cursor: pointer;
   width: 12vw;
+  max-width: 500px;
 }
 
 .overlay p {
@@ -474,7 +476,7 @@ button:hover {
   font-family: subheaderfont;
   text-align: center;
   position: relative;
-  font-size: 0.6vw;
+  font-size: 0.7vw;
   white-space: nowrap;
 }
 

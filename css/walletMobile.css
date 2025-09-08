@@ -329,6 +329,8 @@ button:hover {
 
 .allowanceForm input {
     width: 45vw;
+    max-width: 300px;
+    max-height: 100px;
     padding: 1vh;
     margin-bottom: 7%;
     background-color: #fffcf3;
@@ -341,7 +343,7 @@ button:hover {
 .allowanceForm label {
   font-family: subheaderfont;
   color: #70480c;
-  font-size: 4vw;
+  font-size: clamp(18px, 4vw, 25px);
   margin-top: 8.5vh;
   margin-bottom: 10%;
 }
@@ -354,6 +356,8 @@ button:hover {
 
 .addForm input {
     width: 45vw;
+    max-width: 300px;
+    max-height: 20px;
     padding: 1vh;
     margin-bottom: 7%;
     background-color: #fffcf3;
@@ -366,7 +370,7 @@ button:hover {
 .addForm label {
   font-family: subheaderfont;
   color: #70480c;
-  font-size: 5vw;
+  font-size: clamp(18px, 5vw, 23px);
   margin-top: 5vh;
   margin-bottom: 6%;
 }
@@ -379,19 +383,21 @@ button:hover {
 
 .deleteForm select {
     width: 60vw;
+    max-width: 500px;
+    max-height: 100px;
     padding: 1vh;
     margin-bottom: 7%;
     background-color: #fffcf3;
     border: 3.5px solid #ffde59;
     font-family: bodytext;
     color: #70480c;
-    font-size: 7vw;
+    font-size: 6vw;
 }
 
 .deleteForm label {
   font-family: subheaderfont;
   color: #70480c;
-  font-size: 6vw;
+  font-size: clamp(18px, 5vw, 30px);
   margin-top: 8.5vh;
   margin-bottom: 6%;
 }
@@ -418,10 +424,11 @@ button:hover {
   font-family: subheaderfont;
   color: #ffde59;
   background-color: #70480c;
-  font-size: 4.5vw;
+  font-size: clamp(18px, 4.5vw, 25px);
   cursor: pointer;
   padding: 1.5vh;
   width: 40vw;
+  max-width: 200px;
 }
 
 #addItemButton {
@@ -430,7 +437,7 @@ button:hover {
   font-family: subheaderfont;
   color: #ffde59;
   background-color: #70480c;
-  font-size: 5vw;
+  font-size: clamp(13px, 3vw, 18px);
   cursor: pointer;
   padding: 1.5vh 10vw;
 }
@@ -445,6 +452,7 @@ button:hover {
   cursor: pointer;
   padding: 1.5vh;
   width: 50vw;
+  max-width: 300px;
 }
 
 .overlay p {
@@ -452,8 +460,7 @@ button:hover {
   font-family: subheaderfont;
   text-align: center;
   position: relative;
-  font-size: 3vw;
-  margin-top: 3vh;
+  font-size: clamp(10px, 1vw, 10px);
 }
 
 .savingsButton a:hover {
@@ -475,3 +482,4 @@ button:hover {
     font-size: 2vw;
   }
 }
+
