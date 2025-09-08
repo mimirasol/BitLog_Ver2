@@ -193,7 +193,7 @@ button:hover {
   border: none;
   font-family: subheaderfont;
   color: #ffde59;
-  font-size: 12vw;
+  font-size: clamp(18px, 12vw, 50px);
   margin-top: -52vh;
   animation: pulseGlow 0.5s ease-in-out infinite;
   -webkit-text-stroke: 3px #70480c;
@@ -208,6 +208,8 @@ button:hover {
 
 .allowanceForm input {
     width: 45vw;
+    max-width: 300px;
+    max-height: 20px;
     padding: 1vh;
     margin-bottom: 7%;
     background-color: #fffcf3;
@@ -220,7 +222,7 @@ button:hover {
 .allowanceForm label {
   font-family: subheaderfont;
   color: #70480c;
-  font-size: 4vw;
+  font-size: clamp(18px, 4vw, 23px);
   margin-top: 8.5vh;
   margin-bottom: 10%;
 }
@@ -245,6 +247,8 @@ button:hover {
 
 .addForm input {
     width: 45vw;
+    max-width: 300px;
+    max-height: 20px;
     padding: 1vh;
     margin-bottom: 7%;
     background-color: #fffcf3;
@@ -257,7 +261,7 @@ button:hover {
 .addForm label {
   font-family: subheaderfont;
   color: #70480c;
-  font-size: 5vw;
+  font-size: clamp(18px, 5vw, 23px);
   margin-top: 5vh;
   margin-bottom: 6%;
 }
@@ -272,7 +276,7 @@ button:hover {
   font-family: subheaderfont;
   color: #ffde59;
   background-color: #70480c;
-  font-size: 5vw;
+  font-size: clamp(18px, 5vw, 23px);
   cursor: pointer;
   padding: 1.5vh 10vw;
 }
@@ -285,19 +289,21 @@ button:hover {
 
 .deleteForm select {
     width: 60vw;
+    max-width: 300px;
+    max-height: 160px;
     padding: 1vh;
     margin-bottom: 7%;
     background-color: #fffcf3;
     border: 3.5px solid #ffde59;
     font-family: bodytext;
     color: #70480c;
-    font-size: 7vw;
+    font-size: clamp(18px, 7vw, 23px);
 }
 
 .deleteForm label {
   font-family: subheaderfont;
   color: #70480c;
-  font-size: 6vw;
+  font-size: clamp(18px, 6vw, 23px);
   margin-top: 8.5vh;
   margin-bottom: 6%;
 }
@@ -308,10 +314,11 @@ button:hover {
   font-family: subheaderfont;
   color: #ffde59;
   background-color: #70480c;
-  font-size: 4vw;
+  font-size: clamp(18px, 5vw, 23px);
   cursor: pointer;
   padding: 1.5vh;
   width: 50vw;
+  max-width: 300px;
 }
 
 .container {

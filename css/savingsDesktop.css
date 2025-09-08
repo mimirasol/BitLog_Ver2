@@ -62,20 +62,23 @@
 
 .sidebar {
   margin: 0;
-  padding: 0 0 10px 70px;
+  padding: 3% 1% 10% 68px;
   width: 90px;
+  display: flex;
   background-color: #fffcf3;
   position: fixed;
   height: 100%;
   overflow: auto;
   border-right: 5px solid #70480c;
+  justify-content: flex-start !important;
+  flex-direction: column !important;
+  z-index: 1000; 
 }
 
 .sidebar .icon {
   background: transparent;
   border: none;
-  padding: 10px;
-  margin: 50px 0;
+  margin-top: 80%;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -96,11 +99,10 @@
 .sidebar .logo {
   background: transparent;
   border: none;
-  margin: 50px 0;
   cursor: pointer;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
 
 .sidebar .logo img {
@@ -116,12 +118,12 @@
 
 .logout {
   position: absolute;
-  bottom: 20px;
+  bottom: 27%;
 }
 
 div.content {
-  margin-left: 340px;
-  padding-top: 200px;
+  margin-left: 35vh;
+  padding-top: 10%;
   animation: pixelBounce 2.5s ease-in-out infinite;
 }
 
@@ -130,8 +132,8 @@ div.content {
     flex-direction: row;
     gap: 20px;
     justify-content: center;
-    margin-bottom: 2%;
-    margin-right: 10%;
+    margin-bottom: 6.5%;
+    margin-right: 13%;
     position: relative;
     animation: pixelBlink  1.3s ease-in-out infinite;
 }
@@ -143,6 +145,7 @@ button:hover {
 }
 
 .log {
+    margin-left: 5.1%;
     margin-right: auto;
 }
 
@@ -208,26 +211,26 @@ button:hover {
 .allowanceForm {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .allowanceForm input {
-    width: 94%;
-    padding: 2%;
+    width: 12vw;
+    padding: 1vh;
     margin-bottom: 7%;
-    margin-left: 0%;
     background-color: #fffcf3;
     border: 3.5px solid #ffde59;
     font-family: bodytext;
     color: #70480c;
-    font-size: 1.3vw;
+    font-size: 2vw;
 }
 
 .allowanceForm label {
   font-family: subheaderfont;
   color: #70480c;
-  font-size: 120%;
-  margin-top: 45%;
-  margin-bottom: 10%;
+  font-size: 150%;
+  margin-top: 10vh;
+  margin-bottom: 2vh;
 }
 
 #setAllowanceButton {
@@ -238,7 +241,8 @@ button:hover {
   background-color: #70480c;
   font-size: 23px;
   cursor: pointer;
-  padding: 15px 70px;
+  padding: 15px;
+  max-width: 11vw;
 }
 
 .addForm {
@@ -320,7 +324,7 @@ button:hover {
 .savingsbox {
   position: relative;
   width: 40%;
-  height: 50vh;
+  height: 26vh;
   background-color: #fffcf3;
   border: 5px solid #70480c;
   color: #70480c;
@@ -335,6 +339,7 @@ button:hover {
 .savingsbox p {
     color: #ffde59;
     font-family: bodytext;
+    font-size: 3vw;
 }
 .savingsbox #goalText{
     color: #70480c;
@@ -344,8 +349,9 @@ button:hover {
 
 .listbox {
   position: relative;
-  margin-right: 13%;
-  width: 40%;
+  margin-right: 12%;
+  margin-bottom: 8%;
+  width: 43%;
   height: 40vh;
   background-color: #fffcf3;
   border: 5px solid #70480c;
@@ -404,8 +410,8 @@ button:hover {
 }
 
 .walletButton {
-    margin-left: 47%;
-    margin-top: -5.1%;
+    margin-left: 30%;
+    margin-top: -0.6%;
 }
 
 .walletButton a{
@@ -414,7 +420,7 @@ button:hover {
     font-family: subheaderfont;
     background-color: #70480c;
     font-size: 30px;
-    padding: 25px 224.4px; 
+    padding: 2.3vh 11.3vw; 
     display: inline-block;
 }
 
@@ -439,6 +445,7 @@ html, body {
 .profile {
   height: 40px;
     width: 40px;
+    margin-top: 80%;
     background-color: #ffde59;
     border: 2px solid #70480c;
     box-shadow: 7px 5px #70480c;
