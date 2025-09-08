@@ -60,6 +60,8 @@ $stmt->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="icon" type="image/gif" href="../css/assets/bitlog_coin.png">
+    <link rel="stylesheet" href="../css/savingsMobile.css"
+      media="screen and (min-width: 320px)">
     <link rel="stylesheet" href="../css/savingsDesktop.css"
       media="screen and (min-width: 1441px)">
 </head>
@@ -133,7 +135,7 @@ $stmt->close();
     
     <div class="inputBox">
         <form action="../handlers/logSaving.php" method="POST" class="allowanceForm">
-            <label for="allowance">current amount</label>
+            <label for="allowance">add amount</label>
             <input type="text" id="amount" name="amount">
             <input type="hidden" id="goal_id" name="goal_id">
             <button type="submit" id="setAllowanceButton">log</button>

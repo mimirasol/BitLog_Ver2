@@ -44,7 +44,7 @@ $budget = $allowance - $total_expenses;
     <title>Dashboard</title>
     <link rel="icon" type="image/gif" href="../css/assets/bitlog_coin.png">
     <link rel="stylesheet" href="../css/dashboardMobile.css"
-      media="screen and (min-width: 340px)">
+      media="screen and (min-width: 320px)">
     <link rel="stylesheet" href="../css/dashboardDesktop.css"
       media="screen and (min-width: 1441px)">
 </head>
