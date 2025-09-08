@@ -77,6 +77,11 @@ html, body {
     animation: pixelBounce 2.5s ease-in-out infinite;
 }
 
+.content {
+  animation: fadeSlideIn 0.7s ease-out forwards;
+}
+
+
 .title img {
     width: 40vh;
     margin: 7vh 0 -2vh 0;

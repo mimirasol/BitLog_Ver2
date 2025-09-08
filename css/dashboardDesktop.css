@@ -127,6 +127,10 @@ div.content {
   animation: pixelBounce 2.5s ease-in-out infinite;
 }
 
+.wrapper {
+  animation: fadeSlideIn 0.7s ease-out forwards;
+}
+
 .character-wrapper {
   height: 550px;
   width: 550px;

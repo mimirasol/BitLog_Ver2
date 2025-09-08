@@ -105,41 +105,43 @@ $stmt->close();
     </button>
   </div>
 
-    <div class="content">
-        <button id="setButton">SET</button>
+    <div class="wrapper">
+        <div class="content">
+            <button id="setButton">SET</button>
 
-        <div class="container allowance">Allowance 
-            <span class="value"><?php echo $allowance; ?></span>
-        </div>
-        <div class="container budget">Budget
-            <span class="value"><?php echo number_format($budget, 2, '.', ''); ?></span>
-        </div>
-        <div class="container expenses">Expenses
-            <span class="value"><?php echo $total_expenses; ?></span>
-        </div>
+            <div class="container allowance">Allowance 
+                <span class="value"><?php echo $allowance; ?></span>
+            </div>
+            <div class="container budget">Budget
+                <span class="value"><?php echo number_format($budget, 2, '.', ''); ?></span>
+            </div>
+            <div class="container expenses">Expenses
+                <span class="value"><?php echo $total_expenses; ?></span>
+            </div>
 
-        <div class="itemsButton">
-            <button id="addButton">ADD</button>
-            <button id="deleteButton">DELETE</button>
-        </div>
-        
-        <div class="expensesBox">
-            <ul class = "items">
-                <?php
-                    if (!empty($items) && !empty($prices)) {
-                        for ($i = 0; $i < count($items); $i++) { //loop to access the array
-                            echo "<li><span class='itemName'>{$items[$i]}</span>
-                                    <span class='itemPrice'>{$prices[$i]}</span></li>";
+            <div class="itemsButton">
+                <button id="deleteButton">DELETE</button>
+                <button id="addButton">ADD</button>
+            </div>
+            
+            <div class="expensesBox">
+                <ul class = "items">
+                    <?php
+                        if (!empty($items) && !empty($prices)) {
+                            for ($i = 0; $i < count($items); $i++) { //loop to access the array
+                                echo "<li><span class='itemName'>{$items[$i]}</span>
+                                        <span class='itemPrice'>{$prices[$i]}</span></li>";
+                            }
+                        } else {
+                            echo "<p>No expenses</p>";
                         }
-                    } else {
-                        echo "<p>No expenses</p>";
-                    }
-                ?>
-            </ul>
-        </div>
+                    ?>
+                </ul>
+            </div>
 
-        <div class="savingsButton">
-            <a href="savings.php">savings</a>
+            <div class="savingsButton">
+                <a href="savings.php">savings</a>
+            </div>
         </div>
     </div>
 
@@ -195,6 +197,16 @@ $stmt->close();
     </div>
 
     <script>
+        window.addEventListener ("DOMContentLoaded", ()=> {
+            const wrapper = document.querySelector(".wrapper");
+
+            if (sessionStorage.getItem("walletPage") === "true") {
+                wrapper.classList.add("fadeIn");
+            }
+
+            sessionStorage.setItem("walletPage", "false");
+        });
+
         let activeDiv = null; // global variable
 
         document.getElementById("setButton").addEventListener("click", ()=> {

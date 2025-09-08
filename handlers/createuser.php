@@ -32,7 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if($stmt->execute()) {
             $_SESSION['user_id'] = $conn->insert_id; 
             $_SESSION['username'] = $username;
-            header("Location: ../views/dashboard.php");
+            $_SESSION['new_user'] = true;
+            header("Location: ../views/loading.php");
             exit();
         } else {
             $error = "Error inserting user: " . $stmt->error;

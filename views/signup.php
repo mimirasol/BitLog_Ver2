@@ -12,33 +12,35 @@
 </head>
 <body>
     <div class="signupPage">
-        <div class="title">
-            <img src="../css/assets/bitlog.png" id="bitlog">
-            <p>Embark on a pixel-powered money quest where you manage your 
-                <br>gold, defeat overspending, and unlock savings milestones!</p>
+        <div class="content">
+            <div class="title">
+                <img src="../css/assets/bitlog.png" id="bitlog">
+                <p>Embark on a pixel-powered money quest where you manage your 
+                    <br>gold, defeat overspending, and unlock savings milestones!</p>
 
-            <div class="buttons">
-                <div class="signupButton">
-                    <a href="login.php">LOG IN</a>
+                <div class="buttons">
+                    <div class="signupButton">
+                        <a href="login.php">LOG IN</a>
+                    </div>
                 </div>
             </div>
+
+        <div class="labelBox">
+            <p>SIGN UP</p>
         </div>
 
-    <div class="labelBox">
-        <p>SIGN UP</p>
-    </div>
+        <div class="signupBox">
+            <form action="../handlers/createuser.php" method="POST" class="signupForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
 
-    <div class="signupBox">
-        <form action="../handlers/createuser.php" method="POST" class="signupForm">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit" class="submitButton">enter</button>
-            <p id="error-message" style="display:none;"></p>
-        </form>
+                <button type="submit" class="submitButton">enter</button>
+                <p id="error-message" style="display:none;"></p>
+            </form>
+        </div>
     </div>
 
     <script>

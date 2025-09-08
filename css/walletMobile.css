@@ -121,6 +121,10 @@ div.content {
   flex-direction: column;
 }
 
+.wrapper.fadeIn {
+  animation: fadeSlideIn 0.7s ease-out forwards;
+}
+
 .container {
   width: 75vw;
   height: 3vh;
@@ -198,15 +202,15 @@ html, body {
 
 .items {
     list-style: none;
-    padding: 18px 20px;
+    padding: 1.4vh 2.5vw;
     margin: 0;
     color: #ffbf00;
     font-family: subheaderfont;
 }
 
 .items li {
-    border: 3px solid #70480c;
-    padding: 0.5vh 4vw;
+    border: 2.4px solid #70480c;
+    padding: 1.5vh 4vw;
     color: #fffcf3;
     margin-bottom: 10px;
     display: flex;

@@ -31,7 +31,6 @@
   }
 }
 
-
 @keyframes pixelBlink {
   0%, 100% {
     filter: brightness(1);
@@ -75,6 +74,10 @@ html, body {
 .homepage {
     position: relative;
     animation: pixelBounce 2.5s ease-in-out infinite;
+}
+
+.content {
+  animation: fadeSlideIn 0.7s ease-out forwards;
 }
 
 .title img {

@@ -53,6 +53,7 @@ $stmt->close();
     </button>
   </div>
 
+  <div class="wrapper">
     <div class="content">
     <button id ="prevButton"><</button>
 
@@ -75,20 +76,29 @@ $stmt->close();
           <p>User Information</p>
       </div>
 
-    <div class="userInfo">
-        <form action="../handlers/editUsername.php" method="POST" class="editForm">
-            <label for="editName">Name:</label>
-            <?php
-                echo '<input type="text" id="username" name="editUsername" placeholder="'.$username . '">';
-            ?>
-            <button type="submit" id="setUsername">edit</button>
-            <p id="errorMessage" style="display: none;"></p>
-            <p id="confirmationMessage" style="display: none;"></p>
-        </form>
+      <div class="userInfo">
+          <form action="../handlers/editUsername.php" method="POST" class="editForm">
+              <label for="editName">Name:</label>
+              <?php
+                  echo '<input type="text" id="username" name="editUsername" placeholder="'.$username . '">';
+              ?>
+              <button type="submit" id="setUsername">edit</button>
+              <p id="errorMessage" style="display: none;"></p>
+              <p id="confirmationMessage" style="display: none;"></p>
+          </form>
+      </div>
     </div>
-    </div>
+  </div>
 
-    <script>  
+    <script>
+    const wallet = document.querySelector('a[href="wallet.php"]');
+    
+    if (wallet) {
+      wallet.addEventListener ("click", function(e) {
+      sessionStorage.setItem("walletPage", "true");
+      });
+    }
+
     const animals = [
         "../css/assets/cat.png",
         "../css/assets/chicken.png",

@@ -141,6 +141,10 @@ div.content {
     align-items: center;
 }
 
+.wrapper {
+  animation: fadeSlideIn 0.7s ease-out forwards;
+}
+
 .character-wrapper {
     height: 28vh;
     width: 60vw;

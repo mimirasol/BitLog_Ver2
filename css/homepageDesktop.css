@@ -77,6 +77,10 @@ html, body {
     animation: pixelBounce 2.5s ease-in-out infinite;
 }
 
+.content {
+  animation: fadeSlideIn 0.7s ease-out forwards;
+}
+
 .title img {
     width: 33%;
     margin: 8% 48% 0 0;
@@ -92,7 +96,7 @@ html, body {
 }
 
 .title p {
-    margin: 0 0 0 -45vw;
+    margin: 0 0 0 -40vw;
     font-size: 200%;
     text-align: left;
 }

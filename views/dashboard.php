@@ -71,26 +71,38 @@ $budget = $allowance - $total_expenses;
     </button>
   </div>
 
-  <div class="content">
-    <div class="character-wrapper">
-      <?php
-            echo '<img src="' . $animal . '" id="animalImage">';
-        ?>
-      <div class="overlay-text">Hello, <?php echo $username; ?>!</div>
-    </div>
+  <div class="wrapper">
+    <div class="content">
+      <div class="character-wrapper">
+        <?php
+              echo '<img src="' . $animal . '" id="animalImage">';
+          ?>
+        <div class="overlay-text">Hello, <?php echo $username; ?>!</div>
+      </div>
 
-    <div class="container allowance">
-      Allowance
-      <span class="value"><?php echo $allowance; ?></span>
-    </div>
-    <div class="container budget">
-      Budget
-      <span class="value"><?php echo number_format($budget, 2, '.', ''); ?></span>
-    </div>
-    <div class="container expenses">
-      Expenses
-      <span class="value"><?php echo $total_expenses; ?></span>
+      <div class="container allowance">
+        Allowance
+        <span class="value"><?php echo $allowance; ?></span>
+      </div>
+      <div class="container budget">
+        Budget
+        <span class="value"><?php echo number_format($budget, 2, '.', ''); ?></span>
+      </div>
+      <div class="container expenses">
+        Expenses
+        <span class="value"><?php echo $total_expenses; ?></span>
+      </div>
     </div>
   </div>
+
+  <script>
+    const wallet = document.querySelector('a[href="wallet.php"]');
+
+    if (wallet) {
+      wallet.addEventListener ("click", function(e){
+      sessionStorage.setItem ("walletPage", "true");
+      });
+    }
+  </script>
 </body>
 </html>
