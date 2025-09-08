@@ -199,6 +199,102 @@ div.content {
   font-family: bodytext;
 }
 
+.content button {
+    position: relative;
+    top: -2.6vh;            /* distance from top of rectangle */
+    left: 65vw;
+    background: transparent;
+    border: 2px solid #70480c;
+    font-family: subheaderfont;
+    color: #70480c;
+    background-color: #ffde59;
+    font-size: 3vw;
+    cursor: pointer;
+    padding: 1.5vh 8vw;
+    z-index: 1000;
+}
+
+button:hover {
+    filter: brightness(1.4);
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#closeButton {
+  position: absolute;
+  background: transparent;
+  border: none;
+  font-family: subheaderfont;
+  color: #ffde59;
+  font-size: 12vw;
+  margin-top: -52vh;
+  animation: pulseGlow 0.5s ease-in-out infinite;
+  -webkit-text-stroke: 3px #70480c;
+}
+
+.inputBox {
+    background: #fffcf3;
+    border: 5px solid #70480c;
+    width: 85vw;
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.addForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addForm input {
+    width: 45vw;
+    padding: 1vh;
+    margin-bottom: 7%;
+    background-color: #fffcf3;
+    border: 3.5px solid #ffde59;
+    font-family: bodytext;
+    color: #70480c;
+    font-size: 6vw;
+}
+
+.addForm label {
+  font-family: subheaderfont;
+  color: #70480c;
+  font-size: 5vw;
+  margin-top: 5vh;
+  margin-bottom: 6%;
+}
+
+#addItemButton {
+  background: transparent;
+  border: none;
+  font-family: subheaderfont;
+  color: #ffde59;
+  background-color: #70480c;
+  font-size: 5vw;
+  cursor: pointer;
+  padding: 1.5vh 10vw;
+}
+
+#amountLabel {
+  margin-top: -1%;
+}
+
 html, body {
     margin: 0;
     padding: 0;

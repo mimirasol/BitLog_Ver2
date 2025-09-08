@@ -122,8 +122,8 @@
 }
 
 div.content {
-  margin-left: -32%;
-  padding-top: 24vh;
+  margin-right: 30vw;
+  padding-top: 10%;
   animation: pixelBounce 2.5s ease-in-out infinite;
 }
 
@@ -132,8 +132,9 @@ div.content {
 }
 
 .character-wrapper {
-  height: 550px;
-  width: 550px;
+  width: 30vw;
+  height: 60vh;
+
   background-color: #ffde59;
   border: 3px solid #70480c;
   box-shadow: 16px 13px #70480c;
@@ -159,21 +160,21 @@ div.content {
   color: #70480c;
   border-top: 2px solid #70480c;
   font-family: subheaderfont;
-  font-size: 30px;
+  font-size: clamp(18px, 1.7vw, 50px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .container {
-  position: absolute;
-  width: 600px;
-  height: 120px;
+  position: relative;
+  width: 30vw;
+  height: 13vh;
   background-color: #fffcf3;
   color: #70480c;
   border: 4px solid #70480c;
   font-family: subheaderfont;
-  font-size: 26px;
+  font-size: clamp(18px, 1.3vw, 50px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -188,18 +189,110 @@ div.content {
 }
 
 .allowance {
-  left: 65%;
-  bottom: 50%;
+  left: 41vw;
+  bottom: 70.5vh;
 }
 
 .budget {
-  left: 65%;
-  bottom: 23.5%;
+  left: 41vw;
+  bottom: 67.5vh;
 }
 
 .expenses {
-  left: 65%;
-  bottom: -3%;
+  left: 41vw;
+  bottom: 64.5vh;
+}
+
+.content button {
+    position: relative;
+    top: -69vh;
+    left: 71vw;
+    background: transparent;
+    border: 4px solid #70480c;
+    font-family: subheaderfont;
+    color: #70480c;
+    background-color: #ffde59;
+    font-size: clamp(18px, 2vw, 30px);
+    cursor: pointer;
+    padding: 1.5vh 8vw;
+    z-index: 1000;
+}
+
+button:hover {
+    filter: brightness(1.4);
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+}
+
+.addForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#closeButton {
+  position: relative;
+  background: transparent;
+  border: none;
+  font-family: subheaderfont;
+  color: #ffde59;
+  font-size: clamp(18px, 20vw, 50px);
+  margin-top: -50vh;
+  animation: pulseGlow 0.5s ease-in-out infinite;
+  -webkit-text-stroke: 3px #70480c;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.inputBox {
+    background: #fffcf3;
+    border: 5px solid #70480c;
+    width: 25vw;
+    height: 45vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.addForm input {
+    width: 15vw;
+    min-height: 30px;
+    padding: 1.2vh;
+    margin-bottom: 7%;
+    background-color: #fffcf3;
+    border: 3.5px solid #ffde59;
+    font-family: bodytext;
+    color: #70480c;
+    font-size: 1.5vw;
+}
+
+.addForm label {
+  font-family: subheaderfont;
+  color: #70480c;
+  font-size: 1.4vw;
+  margin-top: 6vh;
+  margin-bottom: 6%;
+}
+
+#addItemButton {
+  background: transparent;
+  border: none;
+  font-family: subheaderfont;
+  color: #ffde59;
+  background-color: #70480c;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 13px 60px;
 }
 
 html, body {

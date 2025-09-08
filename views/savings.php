@@ -63,7 +63,7 @@ $stmt->close();
     <link rel="stylesheet" href="../css/savingsMobile.css"
       media="screen and (min-width: 320px)">
     <link rel="stylesheet" href="../css/savingsDesktop.css"
-      media="screen and (min-width: 1441px)">
+      media="screen and (min-width: 1000px)">
 </head>
 <body>
   <div class="sidebar">

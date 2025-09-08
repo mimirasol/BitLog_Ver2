@@ -46,7 +46,7 @@ $budget = $allowance - $total_expenses;
     <link rel="stylesheet" href="../css/dashboardMobile.css"
       media="screen and (min-width: 320px)">
     <link rel="stylesheet" href="../css/dashboardDesktop.css"
-      media="screen and (min-width: 1441px)">
+      media="screen and (min-width: 1000px)">
 </head>
 <body>
   <div class="sidebar">
@@ -92,7 +92,26 @@ $budget = $allowance - $total_expenses;
         Expenses
         <span class="value"><?php echo $total_expenses; ?></span>
       </div>
+
+      <button id="addButton">add</button>
     </div>
+  </div>
+
+  <div id="addItem" style="display: none;" class="overlay">
+      <button class="closeButton" id="closeButton">X</button>
+      
+      <div class="inputBox">
+          <form action="../handlers/addItemDashboard.php" method="POST" class="addForm">
+              <label for="item">add item</label>
+              <input type="text" id="addItem" name="addItem">
+
+              <label for="item" id="amountLabel">amount</label>
+              <input type="text" id="addAmount" name="addAmount">
+
+              <button type="submit" id="addItemButton">add</button>
+              <p id="error-message-add" style="display: none;"></p>
+          </form>
+      </div>
   </div>
 
   <script>
@@ -102,6 +121,36 @@ $budget = $allowance - $total_expenses;
       wallet.addEventListener ("click", function(e){
       sessionStorage.setItem ("walletPage", "true");
       });
+    }
+
+    let activeDiv = null; // global variable
+
+    document.getElementById("addButton").addEventListener("click", ()=> {
+        activeDiv = document.getElementById("addItem");
+        activeDiv.style.display = 'flex';
+    });
+
+    document.querySelectorAll(".closeButton").forEach(button => {
+        button.addEventListener("click", () => {
+            if (activeDiv) {
+            activeDiv.style.display = 'none';
+            activeDiv = null;
+            }
+        });
+    });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const errorMessage = urlParams.get('error');
+    const errorType = urlParams.get('type');
+
+    if (errorMessage && errorType) {
+        if (errorType === "add") {
+            let errorElementAdd = document.getElementById("error-message-add");
+            errorElementAdd.textContent = errorMessage;
+            errorElementAdd.style.display = "block";
+            document.getElementById("addItem").style.display = 'flex';
+            activeDiv = document.getElementById("addItem");
+        }
     }
   </script>
 </body>
