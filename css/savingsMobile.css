@@ -185,7 +185,6 @@ button:hover {
     text-align: center;
     display: flex;
     justify-content: center;
-    padding-bottom: 3vh;
 }
 
 #closeButton {
@@ -261,6 +260,10 @@ button:hover {
   font-size: 5vw;
   margin-top: 5vh;
   margin-bottom: 6%;
+}
+
+#amountLabel {
+  margin-top: -1%;
 }
 
 #addItemButton {
@@ -359,6 +362,9 @@ button:hover {
     color: #70480c;
     font-family: subheaderfont;
     font-size: clamp(12px, 4vw, 20px);
+    max-width: 90%;
+    text-align: center;
+    overflow-wrap: break-word;
 }
 
 .listbox {
@@ -408,6 +414,9 @@ button:hover {
   min-width: 0;
   white-space: nowrap;
   text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .goalItem .itemPrice {
