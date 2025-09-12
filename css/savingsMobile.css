@@ -177,6 +177,14 @@ button:hover {
     z-index: 999;
 }
 
+.overlay p {
+  color: red;
+  font-family: subheaderfont;
+  text-align: center;
+  position: relative;
+  font-size: clamp(10px, 1vw, 10px);
+}
+
 .inputBox {
     background: #fffcf3;
     border: 5px solid #70480c;
