@@ -146,8 +146,6 @@ $stmt->close();
     </div>
 
     <div id="setAllowance" style="display: none;" class="overlay">
-        <button class="closeButton" id="closeButton">X</button>
-        
         <div class="inputBox">
             <form action="../handlers/setAllowance.php" method="POST" class="allowanceForm">
                 <label for="allowance">allowance</label>
@@ -157,10 +155,11 @@ $stmt->close();
                 
             </form>
         </div>
+
+        <button class="closeButton" id="closeButton">X</button>
     </div>
 
     <div id="addItem" style="display: none;" class="overlay">
-        <button class="closeButton" id="closeButton">X</button>
         
         <div class="inputBox">
             <form action="../handlers/addItem.php" method="POST" class="addForm">
@@ -174,11 +173,11 @@ $stmt->close();
                 <p id="error-message-add" style="display: none;"></p>
             </form>
         </div>
+
+        <button class="closeButton" id="closeButton">X</button>
     </div>
 
     <div id="deleteItem" style="display: none;" class="overlay">
-        <button class="closeButton" id="closeButton">X</button>
-        
         <div class="inputBox">
             <form action="../handlers/deleteItem.php" method="POST" class="deleteForm">
                 <label for="item">delete item</label>
@@ -190,10 +189,33 @@ $stmt->close();
                     ?>
                 </select>
                 
-                <button type="submit" id="deleteItemButton">delete</button>
+                <div class="buttonDelete">
+                    <button type="submit" id="deleteItemButton">delete</button>
+                    <button type="button" id="clearButton">clear</button>
+                </div>
                 <p id="error-message-delete" style="display: none; margin-top: 3vh;" id="deleteMessage"></p>
             </form>
         </div>
+
+        <button class="closeButton" id="closeButton">X</button>
+    </div>
+
+    <div id="clearList" style="display: none;" class="overlay">
+        <div class="clearBox">
+            <form action="../handlers/clearList.php" method="POST" class="clearList">
+                <label for="clear">delete all items?</label>
+
+                <div class="radioButtons">
+                    <input type="radio" id="yes" name="confirmClear" value="yes">
+                    <label for="yes">Yes</label>
+
+                    <input type="radio" id="no" name="confirmClear" value="no">
+                    <label for="no">No</label>
+                </div>
+            </form>
+        </div>
+
+        <button class="closeButton" id="closeButton">X</button>
     </div>
 
     <script>
@@ -224,12 +246,27 @@ $stmt->close();
             activeDiv.style.display = 'flex';
         });
 
+        document.getElementById("clearButton").addEventListener("click", ()=> {
+            if (activeDiv) {
+                activeDiv.style.display = 'none';
+            }
+            
+            activeDiv = document.getElementById("clearList");
+            activeDiv.style.display = 'flex';
+        });
+
         document.querySelectorAll(".closeButton").forEach(button => {
             button.addEventListener("click", () => {
                 if (activeDiv) {
                 activeDiv.style.display = 'none';
                 activeDiv = null;
                 }
+            });
+        });
+
+        document.querySelectorAll(".radioButtons input[type=radio]").forEach(input => {
+            input.addEventListener("change", () => {
+                input.form.submit();
             });
         });
 

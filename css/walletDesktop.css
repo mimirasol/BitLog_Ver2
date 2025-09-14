@@ -459,6 +459,12 @@ button:hover {
   padding: 13px 60px;
 }
 
+.buttonDelete {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2vh;
+}
+
 #deleteItemButton {
   background: transparent;
   border: none;
@@ -469,6 +475,53 @@ button:hover {
   cursor: pointer;
   width: 12vw;
   max-width: 500px;
+}
+
+#clearButton {
+  background: transparent;
+  border: none;
+  font-family: subheaderfont;
+  color: #ffde59;
+  background-color: #70480c;
+  font-size: 1.14vw;
+  cursor: pointer;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  width: 12vw;
+  margin-top: 1vh;
+}
+
+.clearBox {
+    background: #fffcf3;
+    border: 5px solid #70480c;
+    width: 25vw;
+    height: 45vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.clearBox label {
+  font-family: bodytext;
+  color: #70480c;
+  font-size: 2.5vw;
+}
+
+.radioButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.radioButtons label {
+  font-family: subheaderfont;
+  font-size: 1.2vw;
+  color: #70480c;
+  background-color: #ffde59;
+  padding: 1.5vh 3vw;
+  margin-top: 2vh;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .overlay p {
