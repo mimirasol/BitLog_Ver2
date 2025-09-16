@@ -103,6 +103,7 @@ $stmt->close();
     <div class="container">
       <div class="savingsbox">
           Savings
+          <p id="noteText">(click on a goal to log!)</p>
           <p id="goalText">Goal: </p>
           <p id="priceText">P 0.00 / 0.00</p>    
       </div>
